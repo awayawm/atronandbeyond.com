@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import * as data from "./data"
+import  _ from 'lodash'
 class App extends Component {
 
   constructor(props) {
@@ -23,7 +24,7 @@ class App extends Component {
         {this.state.articles.map((article, i) =>
           <div key={i}>
             <h2>{article.title}</h2>
-            <p>{article.content}</p>
+            <p dangerouslySetInnerHTML ={{__html:_.truncate(article.content, {'length': 200})}}/>
           </div>)}
       </div>
     );
