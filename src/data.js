@@ -18,13 +18,15 @@ module.exports = {
   }],
   "articles": [
     {
-      title: "Uploading Pgn from the DGT Electronic Chessboard",
+      enabled:true,
+      title: "Uploading PGN To LiveChess from the DGT Electronic Chessboard",
       tags: [1],
       date: "2021-06-20",
       content:`The DGT Electronic Chess Board is a sweet little device capable of detecting which squares chess pieces are placed on and 
       sending these positions to software that can reconstruct the game in Pgn or ePgn format.`
     },
     {
+      enabled:true,
       title: "Populate Unity Dropdown from UnityWebRequest",
       tags: [3],
       date: "2021-06-20",
@@ -32,6 +34,7 @@ module.exports = {
       we'll need to know a little about the methods on Tmp_Dropdown, Unity event handlers and maybe a bit about the dropdown template.`
     },
     {
+      enabled:true,
       title: "Building a Discord Bot with Discord.js",
       tags: [3],
       date: "2021-06-20",
@@ -40,6 +43,7 @@ module.exports = {
       `
     },
     {
+      enabled:true,
       title: "Checking Out Mc-707 Firmware update 1.72",
       tags: [2],
       date: "2021-06-20",
@@ -50,11 +54,13 @@ module.exports = {
     }
     ,
     {
+      enabled:true,
       title: "Creating a Custom Toolchain for React",
       tags: [3],
       date: "2021-06-20",
-      content:`A recent humble bundle for front end development contained the last press of O'Reilly book Learning React.  Although you can just include React from 
-      their CDN in your existing html files, it's common to use a toolchain to bring together a full ecosystems of packages that make developing with React easier.`
+      content:`A recent humble bundle for front end development contained the last press of O'Reilly book Learning React.  Although you can run pure React by including react from 
+      the CDN, it's common to use a toolchain to bring together a full ecosystems of packages that make developing with React easier. 
+      This article is heavily inspired by <a href="https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658"/>this blog post</a>.`
     }
   ]
 }
