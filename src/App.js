@@ -32,6 +32,7 @@ class App extends Component {
           .map((article, i) =>
             <div key={i}>
               <h2>{article.title}</h2>
+              <div>{article.tags.map(articleTag => _.find(this.state.tags, (tag) => articleTag == tag.id).name)}</div>
               <p dangerouslySetInnerHTML={{ __html: _.truncate(article.content, { 'length': 200 }) }} />
             </div>)}
       </div>
