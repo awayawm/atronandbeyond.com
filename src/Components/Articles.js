@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import _ from 'lodash'
-import '../App.css'
+import '../css/App.css'
 
 export default class Articles extends Component {
     render() {

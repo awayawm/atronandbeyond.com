@@ -1,0 +1,8 @@
+ul.links {
+  list-style-type: none;
+  padding-left: 0px;
+}
+li.links {
+    display: inline;
+    padding-right: 10px;
+}

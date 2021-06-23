@@ -34,7 +34,7 @@ module.exports = {
       date: "2021-06-20",
       content: `The DGT Electronic Chess Board is capable of recording any games played on it into internal memory.  Each piece emits a 
       faint RFID signal and the board contains a mesh sensor that detects the presence of any pieces placed on top of it.  The piece needs to be directly 
-      on top of the square for the board to work and the board can register ghost pieces and peice radio interference, but this is rare.  The data from the board is read 
+      on top of a square for the move to register.  In rare cases the board can register ghost pieces and from radio interference.  The data on the board can be read 
       by a chess program like Fritz or can be simply written to disk for archiving or future analysis.  DGT releases a few programs along with the board
        that are supposed to make connecting the board to your computer easy.  RabbitQueen is helpful for dumping the board memory (readonly) and configuring   
       internal parameters.  RabbitConnect and RabbitPlugin allow you to connect the board to chess programs like Fritz.  
@@ -60,6 +60,8 @@ module.exports = {
       an object we can do something with.  Then we'll use that object to populate the dropdown and to populate some Text objects 
       when an option is selected.
       
+      http://jsonviewer.stack.hu/#http://lichess.org/api/team/all
+
       `
     },
     {
