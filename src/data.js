@@ -2,22 +2,27 @@ module.exports = {
   "header": {
     "title": "atronandbeyond.com",
     "tagline": "Beats and Code",
+    "github":"",
+    "linkdin":""
   },
   "tags": [{
     id: 1,
     name: "Chess",
+    link: "/tags/chess",
     enabled: true,
     icon: '♟️'
   },
   {
     id: 2,
     name: "Beats",
+    link: "/tags/beats",
     enabled: true,
     icon:'🎶'
   },
   {
     id: 3,
     name: "Code",
+    link: "/tags/code",
     enabled: true,
     icon:'💻'
   }],
@@ -27,22 +32,35 @@ module.exports = {
       title: "Reading PGN from the DGT Electronic Chessboard",
       tags: [1],
       date: "2021-06-20",
-      content: `The DGT Electronic Chess Board, true to its name, is capable of recording any chess game played on it into internal memory.  
-      These games can be input to a chess program like Fritz or just written to disk for archiving and future analysis.  There are a few software 
-      titles provided by DGT that are supposed to make interfacing with the DGT easy.  RabbitQueen is helpful for dumping the board memory and configuring   
-      a few internal parameters.  RabbitConnect and RabbitPlugin allow you to connect the board to chess programs like Fritz.  
+      content: `The DGT Electronic Chess Board is capable of recording any games played on it into internal memory.  Each piece emits a 
+      faint RFID signal and the board contains a mesh sensor that detects the presence of any pieces placed on top of it.  The piece needs to be directly 
+      on top of the square for the board to work and the board can register ghost pieces and peice radio interference, but this is rare.  The data from the board is read 
+      by a chess program like Fritz or can be simply written to disk for archiving or future analysis.  DGT releases a few programs along with the board
+       that are supposed to make connecting the board to your computer easy.  RabbitQueen is helpful for dumping the board memory (readonly) and configuring   
+      internal parameters.  RabbitConnect and RabbitPlugin allow you to connect the board to chess programs like Fritz.  
       
-      Of the few programs DGT provides, LiveChess is the most interesting title in my opinion.  It is used capture the games produced by multiple DGT boards 
-      and write them to either one file or multiple files.  This file is updated as the games progress so it can be processed by anyone who wants to parse it.  
-      Lichess is great example of an online chess platform that can read the broadcasted PGN from a live tournament.`
+      Of the programs DGT provides, LiveChess is the most interesting.  It is used capture the live games played by multiple DGT boards 
+      and can write them to disk or stream them on the LiveChess cloud.  The file written to disk will update as the games progresses.  It
+      can be read by online chess services like Lichess or by anyone who wants to parse this data.  I imagine there are folks out there who 
+      read the pgn as is and can reconstruct the game in their head like Beth Harmon in The Queen's Gambit.
+      
+      Thanks to the number of chess libraries on Github it is easy to parse a pgn file.  Python-chess seems like the most feature rich open source project. It 
+      has a ton of contributors and integrates with Polyglot, Syzeyg, and Stockfish easily.  It also has methods for traversing variations of the Pgn as a tree 
+      which would be useful for game analysis. If you prefer javascript, chess.js a great choice too.  It has everything needed to do fun things with Pgn files 
+      and that's what we'll use in the code below.`
     },
     {
       enabled: true,
-      title: "Populate Unity Dropdown from UnityWebRequest",
+      title: "UnityWebRequest and Tmp_Dropdown:  Making a dynamic dropdown in Unity",
       tags: [3],
       date: "2021-06-20",
-      content: `It's possible to populate the options of a Unity dropdown using the results of a REST request in Unity!  To populate the dropdown 
-      we'll need to know a little about the methods on Tmp_Dropdown, Unity event handlers and maybe a bit about the dropdown template.`
+      content: `When putting together a GUI in Unity you may need a dropdown and you don't know the value of the options 
+      until the menu is used.  For example if the values need to come from a web request you may not want to make that request until 
+      the menu is clicked.  In this quick article we'll make a web request using UnityWebRequest and parse the json response into 
+      an object we can do something with.  Then we'll use that object to populate the dropdown and to populate some Text objects 
+      when an option is selected.
+      
+      `
     },
     {
       enabled: true,
