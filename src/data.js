@@ -6,26 +6,35 @@ module.exports = {
   "tags": [{
     id: 1,
     name: "Chess",
-    enabled: true
+    enabled: true,
+    icon: '♟️'
   },
   {
     id: 2,
     name: "Beats",
-    enabled: true
+    enabled: true,
+    icon:'🎶'
   },
   {
     id: 3,
     name: "Code",
-    enabled: true
+    enabled: true,
+    icon:'💻'
   }],
   "articles": [
     {
       enabled: true,
-      title: "Uploading PGN To LiveChess from the DGT Electronic Chessboard",
+      title: "Reading PGN from the DGT Electronic Chessboard",
       tags: [1],
       date: "2021-06-20",
-      content: `The DGT Electronic Chess Board is a sweet little device capable of detecting which squares chess pieces are placed on and 
-      sending these positions to software that can reconstruct the game in Pgn or ePgn format.`
+      content: `The DGT Electronic Chess Board, true to its name, is capable of recording any chess game played on it into internal memory.  
+      These games can be input to a chess program like Fritz or just written to disk for archiving and future analysis.  There are a few software 
+      titles provided by DGT that are supposed to make interfacing with the DGT easy.  RabbitQueen is helpful for dumping the board memory and configuring   
+      a few internal parameters.  RabbitConnect and RabbitPlugin allow you to connect the board to chess programs like Fritz.  
+      
+      Of the few programs DGT provides, LiveChess is the most interesting title in my opinion.  It is used capture the games produced by multiple DGT boards 
+      and write them to either one file or multiple files.  This file is updated as the games progress so it can be processed by anyone who wants to parse it.  
+      Lichess is great example of an online chess platform that can read the broadcasted PGN from a live tournament.`
     },
     {
       enabled: true,
