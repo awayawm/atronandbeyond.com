@@ -7,8 +7,8 @@ export default class Nav extends Component {
     render() {
         return (
             <Router>
-                <ul className="links">
-                    {this.props.tags.filter(tag => tag.enabled).map((tag, i) => <li key={i} className="links"> <Link to={tag.link}>{tag.name}</Link> </li>)}
+                <ul>
+                    {this.props.tags.filter(tag => tag.enabled).map((tag, i) => <li key={i}> {tag.icon} <Link to={tag.link}>{tag.name}</Link> </li>)}
                 </ul>
             </Router>
         )

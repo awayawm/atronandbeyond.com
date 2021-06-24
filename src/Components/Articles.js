@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import _ from 'lodash'
-import '../css/App.css'
+import '../css/Articles.css'
 
 export default class Articles extends Component {
     render() {
@@ -17,7 +17,7 @@ export default class Articles extends Component {
                         <div>
                             <h2 className="icon">{article.title}</h2>
                             <div className="icon">{article.tags.map(articleTag => _.find(this.props.tags, (tag) => articleTag == tag.id).icon)}</div>
-                            <p dangerouslySetInnerHTML={{ __html: _.truncate(article.content, { 'length': 200 }) }} />
+                            <p dangerouslySetInnerHTML={{ __html: _.truncate(article.content, { 'length': 250 }) }} />
                         </div>
                     </div>)
         )

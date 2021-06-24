@@ -1,0 +1,14 @@
+header > h1 {
+    font-size: xx-large;
+    display: inline;
+}
+
+header > div {
+    margin-left: 1em;
+    font-size: large;
+    display: inline;
+}
+
+p {
+    font-size: larger;
+}
