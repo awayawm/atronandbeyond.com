@@ -6,6 +6,7 @@ import Articles from './Components/Articles'
 import { CssBaseline, Container } from '@material-ui/core'
 import "@fontsource/baloo-bhai-2"
 import "./css/App.css";
+import { Helmet } from 'react-helmet'
 
 class App extends Component {
 
@@ -17,12 +18,16 @@ class App extends Component {
   render() {
     return (
       <>
-      <CssBaseline/>
-      <Container>
-        <Header title={this.state.header.title} tagline={this.state.header.tagline} />
-        <Nav tags={this.state.tags} />
-        <Articles articles={this.state.articles} tags={this.state.tags} />
-      </Container>
+        <Helmet>
+          <title>atronandbeyond.com: beats and code</title>
+          <body className="body"/>
+        </Helmet>
+        <CssBaseline />
+        <Container>
+          <Header title={this.state.header.title} tagline={this.state.header.tagline} />
+          <Nav tags={this.state.tags} />
+          <Articles articles={this.state.articles} tags={this.state.tags} />
+        </Container>
       </>
     );
   }
