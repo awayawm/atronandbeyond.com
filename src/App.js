@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <>
         <Helmet>
-          <title>atronandbeyond.com: beats and code</title>
+          <title>atronandbeyond.com: cats and code</title>
           <body className="body"/>
         </Helmet>
         <CssBaseline />
