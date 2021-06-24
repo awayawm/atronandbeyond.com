@@ -1,7 +1,15 @@
-body {
+@font-face {
+  font-family: "Baloo Bhai 2";
+  src: url("../../dist/fonts/baloo-bhai-2-latin-400-normal.woff2") format("woff2"),
+  url("../../dist/fonts/baloo-bhai-2-all-400-normal.woff") format("woff"),
+}
+
+* {
+  font-family: "Baloo Bhai 2";
   background-color: #f2e9e4;
   color: #22223b;
 }
+
 .icon {
   display: inline;
   padding-right: 10px;

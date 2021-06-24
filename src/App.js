@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import "./css/App.css";
 import * as data from "./data"
 import Header from './Components/Header'
 import Nav from './Components/Nav'
 import Articles from './Components/Articles'
 import { CssBaseline, Container } from '@material-ui/core'
+import "@fontsource/baloo-bhai-2"
+import "./css/App.css";
 
 class App extends Component {
 
@@ -17,7 +18,7 @@ class App extends Component {
     return (
       <>
       <CssBaseline/>
-      <Container className="App">
+      <Container>
         <Header title={this.state.header.title} tagline={this.state.header.tagline} />
         <Nav tags={this.state.tags} />
         <Articles articles={this.state.articles} tags={this.state.tags} />
