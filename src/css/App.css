@@ -4,10 +4,10 @@
   url("../../dist/fonts/baloo-bhai-2-all-400-normal.woff") format("woff"),
 }
 
-* {
+body {
   font-family: "Baloo Bhai 2";
-  background-color: #f2e9e4;
-  color: #22223b;
+  background-color: #edf2f4;
+  color: #2b2d42;
 }
 
 .icon {

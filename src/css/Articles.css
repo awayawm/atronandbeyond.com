@@ -1,14 +1,19 @@
 header > h1 {
-    font-size: xx-large;
-    display: inline;
+  font-size: xx-large;
+  display: inline;
 }
 
 header > div {
-    margin-left: 1em;
-    font-size: large;
-    display: inline;
+  margin-left: 1em;
+  font-size: large;
+  display: inline;
 }
 
 p {
-    font-size: larger;
+  font-size: larger;
+}
+
+.article {
+  background-color: #8d99ae;
+  margin-bottom: 1em;
 }
