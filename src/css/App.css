@@ -4,7 +4,7 @@
   url("../../dist/fonts/baloo-bhai-2-all-400-normal.woff") format("woff"),
 }
 
-body {
+.body {
   font-family: "Baloo Bhai 2";
   background-color: #edf2f4;
   color: #2b2d42;

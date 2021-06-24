@@ -30,7 +30,7 @@ module.exports = {
             {
                 test: /\.(woff2|woff)$/,
                 loader: "file-loader",
-                options:{
+                options: {
                     name: '[name].[ext]',
                     outputPath: 'fonts/'
                 }
@@ -41,7 +41,8 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "../dist/",
-        filename: "bundle.js"
+        filename: "bundle.js",
+        clean: true,
     },
     devServer: {
         contentBase: path.join(__dirname, "public/"),
@@ -54,7 +55,6 @@ module.exports = {
         isDevelopment && new ReactRefreshWebpackPlugin(),
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
-            title: 'atronandbeyond: Beats and Code',
             template: './src/index.html',
             xhtml:true
         }),
@@ -67,4 +67,5 @@ module.exports = {
         minimize: true,
         minimizer: [new TerserPlugin()]
     },
+    // externals: ["react-helmet"]
 };
