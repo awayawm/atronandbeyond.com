@@ -10,18 +10,23 @@ export default class Header extends Component {
     render() {
         return (<header>
             <h1>
-                {this.props.title}
+                {this.props.header.title}
             </h1>
             <div>
-                {this.props.tagline}
+                {this.props.header.tagline}
             </div>
             <Nav tags={this.props.tags} />
+            <div>
+                <a href={this.props.header.github}>Github</a>
+            </div>
+            <div>
+                <a href={this.props.header.linkedin}>Linkedin</a>
+            </div>
         </header>)
     }
 }
 
 Header.propTypes = {
-    title: PropTypes.string,
-    tagline: PropTypes.string,
     tags: PropTypes.array,
+    header: PropTypes.object
 };

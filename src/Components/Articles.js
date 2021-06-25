@@ -20,7 +20,7 @@ export default class Articles extends Component {
 
                             <Grid item lg={6} key={i}>
                                 <Card className="article">
-                                    <CardContent>
+                                    <CardContent className="cardContent">
                                         <h1 className="icon">{article.title}</h1>
                                         <div className="icon">{article.tags.map(articleTag => _.find(this.props.tags, (tag) => articleTag == tag.id).icon)}</div>
                                         <p dangerouslySetInnerHTML={{ __html: _.truncate(article.content, { 'length': 250 }) }} />

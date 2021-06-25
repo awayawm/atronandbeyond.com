@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import * as data from "./data"
 import Header from './Components/Header'
 import Articles from './Components/Articles'
+// import Footer from './Components/Footer'
 import { CssBaseline, Container } from '@material-ui/core'
-import "@fontsource/baloo-bhai-2"
 import "./css/App.css";
 import { Helmet } from 'react-helmet'
 
@@ -19,12 +19,13 @@ class App extends Component {
       <>
         <Helmet>
           <title>atronandbeyond.com: beats and code</title>
-          <body className="body"/>
+          <body className="body" />
         </Helmet>
         <CssBaseline />
         <Container>
-          <Header title={this.state.header.title} tagline={this.state.header.tagline} tags={this.state.tags}/>
-          <Articles articles={this.state.articles} tags={this.state.tags}/>
+          <Header header={this.state.header} tags={this.state.tags} />
+          <Articles articles={this.state.articles} tags={this.state.tags} />
+          {/* <Footer footer={this.state.footer} /> */}
         </Container>
       </>
     );

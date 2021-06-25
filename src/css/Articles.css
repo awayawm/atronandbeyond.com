@@ -21,3 +21,7 @@ p {
 .articleGrid {
   flex-grow: 1;
 }
+
+.cardContent {
+  margin: 1em;
+}

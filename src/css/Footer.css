@@ -1,14 +1,14 @@
-header {
+footer {
   text-align: center;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  font-size: large;
+  margin: 2em;
 }
 
-header > div {
+footer > div {
   display: inline;
   margin: 1em;
 }
 
-header > div > a {
+footer > div > a {
   text-decoration: none;
 }
