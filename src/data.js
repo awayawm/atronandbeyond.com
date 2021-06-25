@@ -3,7 +3,8 @@ module.exports = {
     "title": "atronandbeyond.com",
     "tagline": "Beats and Code",
     "github":"https://github.com/lakeoftea",
-    "linkedin":"https://www.linkedin.com/in/aaron-myers-88b52683"
+    "linkedin":"https://www.linkedin.com/in/aaron-myers-88b52683",
+    "twitter":""
   },
   "footer": {
 
@@ -59,10 +60,10 @@ module.exports = {
       date: "2021-06-20",
       content: `When putting together a GUI in Unity you may need a dropdown and you don't know the value of the options 
       until the menu is used.  For example if the values need to come from a web request you may not want to make that request until 
-      the menu is clicked.  In this quick article we'll make a web request using UnityWebRequest and parse the json response into 
-      an object we can do something with.  Then we'll use that object to populate the dropdown and to populate some Text objects 
-      when an option is selected.
+      the menu is clicked.  To do this we'll need to use two classes built into Unity, UnityWebRequest and JsonUtility.   UnityWebRequest 
+      is used to make the network request and JsonUtility is used to serialize the response into a class that exposes the values from the response.  
       
+      https://docs.unity3d.com/Manual/JSONSerialization.html
       http://jsonviewer.stack.hu/#http://lichess.org/api/team/all
 
       `
