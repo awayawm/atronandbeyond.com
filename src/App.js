@@ -6,6 +6,8 @@ import Articles from './Components/Articles'
 import { CssBaseline, Container } from '@material-ui/core'
 import "./css/App.css";
 import { Helmet } from 'react-helmet'
+import '@fontsource/baloo-bhai-2/500.css'
+import '@fontsource/baloo-bhai-2'
 
 class App extends Component {
 
