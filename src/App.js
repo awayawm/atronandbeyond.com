@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import * as data from "./data"
 import Header from './Components/Header'
-import Nav from './Components/Nav'
 import Articles from './Components/Articles'
 import { CssBaseline, Container } from '@material-ui/core'
 import "@fontsource/baloo-bhai-2"
@@ -19,14 +18,13 @@ class App extends Component {
     return (
       <>
         <Helmet>
-          <title>atronandbeyond.com: cats and code</title>
+          <title>atronandbeyond.com: beats and code</title>
           <body className="body"/>
         </Helmet>
         <CssBaseline />
         <Container>
-          <Header title={this.state.header.title} tagline={this.state.header.tagline} />
-          <Nav tags={this.state.tags} />
-          <Articles articles={this.state.articles} tags={this.state.tags} />
+          <Header title={this.state.header.title} tagline={this.state.header.tagline} tags={this.state.tags}/>
+          <Articles articles={this.state.articles} tags={this.state.tags}/>
         </Container>
       </>
     );

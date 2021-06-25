@@ -17,3 +17,7 @@ p {
   background-color: #8d99ae;
   margin-bottom: 1em;
 }
+
+.articleGrid {
+  flex-grow: 1;
+}

@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import '../css/Nav.css'
 
 export default class Nav extends Component {
+    constructor(props){
+        super(props)
+    }
     render() {
         return (
             <Router>

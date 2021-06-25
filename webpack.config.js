@@ -46,12 +46,13 @@ module.exports = {
         publicPath: '/dist/',
         hot: true,
         index: 'index.html',
-        meta: { viewport: "minimum-scale=1, initial-scale=1, width=device-width" }
+
     },
     plugins: [
         isDevelopment && new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'index.html'
+            filename: 'index.html',
+            meta: { viewport: "minimum-scale=1, initial-scale=1, width=device-width" }
         }),
         new ESLintPlugin()
     ].filter(Boolean),

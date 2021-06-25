@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+import '../css/Header.css'
+import Nav from '../Components/Nav'
 
 export default class Header extends Component {
+    constructor(props) {
+        super(props)
+    }
     render() {
         return (<header>
             <h1>
@@ -10,6 +15,7 @@ export default class Header extends Component {
             <div>
                 {this.props.tagline}
             </div>
+            <Nav tags={this.props.tags} />
         </header>)
     }
 }
@@ -17,4 +23,5 @@ export default class Header extends Component {
 Header.propTypes = {
     title: PropTypes.string,
     tagline: PropTypes.string,
+    tags: PropTypes.array,
 };
