@@ -20,7 +20,7 @@ module.exports = {
     id: 2,
     name: "Beats",
     link: "/tags/beats",
-    enabled: true,
+    enabled: false,
     icon:'🎶'
   },
   {
@@ -89,7 +89,7 @@ module.exports = {
     }
     ,
     {
-      enabled: true,
+      enabled: false,
       title: "Creating a Custom Toolchain for React",
       tags: [3],
       date: "2021-06-20",
