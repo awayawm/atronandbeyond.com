@@ -28,11 +28,14 @@ class App extends Component {
 					<BrowserRouter>
 						<div className="navbar">
 							<ul>
+              <li>
+              🏡 <Link to={"/"}>Home</Link>
+              </li>
 								{this.state.tags
 									.filter((tag) => tag.enabled)
 									.map((tag, i) => (
 										<li key={i}>
-											{tag.icon} <Link to={tag.link}>{tag.name}</Link>{" "}
+											{tag.icon} <Link to={tag.link}>{tag.name}</Link>
 										</li>
 									))}
 							</ul>
