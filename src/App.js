@@ -9,6 +9,7 @@ import "@fontsource/baloo-bhai-2/500.css"
 import "@fontsource/baloo-bhai-2/700.css"
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom"
 import { Helmet } from "react-helmet"
+import Article from './Components/Article'
 
 class App extends Component {
 	constructor(props) {
@@ -28,9 +29,9 @@ class App extends Component {
 					<BrowserRouter>
 						<div className="navbar">
 							<ul>
-              <li>
-              🏡 <Link to={"/"}>Home</Link>
-              </li>
+								<li>
+									🏡 <Link to={"/"}>Home</Link>
+								</li>
 								{this.state.tags
 									.filter((tag) => tag.enabled)
 									.map((tag, i) => (
@@ -41,6 +42,12 @@ class App extends Component {
 							</ul>
 						</div>
 						<Switch>
+							<Route path="/article/:name">
+								<Article
+									articles={this.state.articles}
+									tags={this.state.tags}
+								/>
+							</Route>
 							<Route path="/tags/:name">
 								<Articles
 									articles={this.state.articles}
