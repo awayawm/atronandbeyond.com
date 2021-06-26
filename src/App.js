@@ -4,11 +4,11 @@ import Header from "./Components/Header"
 import Articles from "./Components/Articles"
 import { CssBaseline, Container } from "@material-ui/core"
 import "./css/App.css"
-import { Helmet } from "react-helmet"
 import "@fontsource/baloo-bhai-2/400.css"
 import "@fontsource/baloo-bhai-2/500.css"
 import "@fontsource/baloo-bhai-2/700.css"
-import { BrowserRouter, Link } from "react-router-dom"
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom"
+import { Helmet } from "react-helmet"
 
 class App extends Component {
 	constructor(props) {
@@ -20,7 +20,6 @@ class App extends Component {
 		return (
 			<>
 				<Helmet>
-					<title>atronandbeyond.com: Beats and Code</title>
 					<body className="body" />
 				</Helmet>
 				<CssBaseline />
@@ -38,8 +37,21 @@ class App extends Component {
 									))}
 							</ul>
 						</div>
+						<Switch>
+							<Route path="/tags/:name">
+								<Articles
+									articles={this.state.articles}
+									tags={this.state.tags}
+								/>
+							</Route>
+							<Route exact path="/">
+								<Articles
+									articles={this.state.articles}
+									tags={this.state.tags}
+								/>
+							</Route>
+						</Switch>
 					</BrowserRouter>
-					<Articles articles={this.state.articles} tags={this.state.tags} />
 				</Container>
 			</>
 		)

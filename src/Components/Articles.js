@@ -1,49 +1,75 @@
-import React, { Component } from "react";
-import PropTypes from 'prop-types';
-import _ from 'lodash'
-import '../css/Articles.css'
-import { Card, CardContent, Grid } from '@material-ui/core'
+import React from "react"
+import _ from "lodash"
+import "../css/Articles.css"
+import { Card, CardContent, Grid } from "@material-ui/core"
+import { useParams } from "react-router-dom"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
 
-export default class Articles extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            tag: this.props.tag,
-            tags: this.props.tags,
-            articles: this.props.articles
-        }
-    }
-
-    render() {
-        return (
-            // article is enabled
-            <div className="articleGrid" >
-                <Grid container spacing={2} >
-                    {this.state.articles.filter(article => article.enabled)
-                        // has at least one tag that is enabled
-                        .filter(article => {
-                            return _.intersection(article.tags, this.state.tags.filter(tag => tag.enabled).map(value => value.id)).length > 0
-                        })
-                        .map((article, i) =>
-                            <Grid item lg={6} key={i}>
-                                <Card className="article">
-                                    <CardContent className="cardContent">
-                                        <h1 className="icon">{article.title}</h1>
-                                        <div className="icon">{article.tags.map(articleTag => _.find(this.state.tags, (tag) => articleTag == tag.id).icon)}</div>
-                                        <p dangerouslySetInnerHTML={{ __html: _.truncate(article.content, { 'length': 250 }) }} />
-                                        <div>{article.date}</div>
-                                    </CardContent>
-                                </Card>
-                            </Grid>
-                        )}
-                </Grid>
-            </div>
-        )
-    }
+let Article = (props) => {
+	let { name } = useParams()
+	let articles
+    let title;
+	if (name != undefined) {
+		let id = props.tags.filter((tag) => tag.name == _.startCase(name))[0].id
+		// console.log(`name: ${name}, id: ${id}, article.tags ${JSON.stringify(props.articles)}`)
+		articles = props.articles.filter((article) => article.tags.includes(id))
+        title = `Atronandbeyond.com: ${_.startCase(name)}`
+	} else {
+		articles = props.articles
+        title = `Atronandbeyond.com: Beats and Code`
+	}
+	return (
+		<>
+			<Helmet>
+				<title>{title}</title>
+			</Helmet>
+			<div className="articleGrid">
+				<Grid container spacing={2}>
+					{//article is enabled
+                    articles
+						.filter((article) => article.enabled)
+						// has at least one tag that is enabled
+						.filter((article) => {
+							return (
+								_.intersection(
+									article.tags,
+									props.tags
+										.filter((tag) => tag.enabled)
+										.map((value) => value.id)
+								).length > 0
+							)
+						})
+						.map((article, i) => (
+							<Grid item lg={6} key={i}>
+								<Card className="article">
+									<CardContent className="cardContent">
+										<h1 className="icon">{article.title}</h1>
+										<div className="icon">
+											{article.tags.map(
+												(articleTag) =>
+													_.find(props.tags, (tag) => articleTag == tag.id).icon
+											)}
+										</div>
+										<p
+											dangerouslySetInnerHTML={{
+												__html: _.truncate(article.content, { length: 250 }),
+											}}
+										/>
+										<div>{article.date}</div>
+									</CardContent>
+								</Card>
+							</Grid>
+						))}
+				</Grid>
+			</div>
+		</>
+	)
 }
 
-Articles.propTypes = {
-    articles: PropTypes.array,
-    tags: PropTypes.array,
-    tag: PropTypes.string
-};
+export default Article
+
+Article.propTypes = {
+	articles: PropTypes.array,
+	tags: PropTypes.array,
+}

@@ -46,7 +46,7 @@ module.exports = {
         publicPath: '/dist/',
         hot: true,
         index: 'index.html',
-
+        historyApiFallback: true,
     },
     plugins: [
         isDevelopment && new webpack.HotModuleReplacementPlugin(),
