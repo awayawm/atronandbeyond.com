@@ -1,3 +1,13 @@
 .paper-article {
     padding: 1em 2em;
 }
+
+.icon {
+	display: inline;
+	margin: 0em 1em;
+	vertical-align: middle;
+}
+
+.icon-header {
+	display: inline;
+}

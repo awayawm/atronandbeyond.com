@@ -8,13 +8,13 @@ let Navbar = (props) => {
         <div className="navbar">
             <ul>
                 <li>
-                    🏡 <Link to={"/"}>Home</Link>
+                    🏡 <Link className="navLink" to={"/"}>Home</Link>
                 </li>
                 {props.tags
                     .filter((tag) => tag.enabled)
                     .map((tag, i) => (
                         <li key={i}>
-                            {tag.icon} <Link to={tag.link}>{tag.name}</Link>
+                            {tag.icon} <Link className="navLink" to={tag.link}>{tag.name}</Link>
                         </li>
                     ))}
             </ul>

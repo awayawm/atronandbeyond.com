@@ -8,8 +8,7 @@ import { Helmet } from 'react-helmet'
 let Article = (props) => {
     let { name } = useParams();
     let article = props.articles.find(article => article.link == name)
-    console.log(`name ${name}, articles: ${JSON.stringify(article)}`)
-
+    // console.log(`name ${name}, articles: ${JSON.stringify(article)}`)
     return (
         <>
             <Helmet>

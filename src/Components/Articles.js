@@ -1,11 +1,12 @@
 import React from "react"
 import _ from "lodash"
 import "../css/Articles.css"
-import { Card, CardContent, Grid } from "@material-ui/core"
+import { CardContent, Grid } from "@material-ui/core"
 import { useParams } from "react-router-dom"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { Link } from 'react-router-dom'
+import ArticlesCard from '../Styles/ArticlesCard'
 
 let Articles = (props) => {
 	let { name } = useParams()
@@ -43,9 +44,9 @@ let Articles = (props) => {
 							})
 							.map((article, i) => (
 								<Grid item lg={6} key={i}>
-									<Card className="article">
+									<ArticlesCard className="article">
 										<CardContent className="cardContent">
-											<h1 className="icon-header"><Link to={`/article/${article.link}`}>{article.title}</Link></h1>
+											<h1 className="icon-header"><Link className="navLink" to={`/article/${article.link}`}>{article.title}</Link></h1>
 											<div className="icon">
 												{article.tags.map(
 													(articleTag) =>
@@ -59,7 +60,7 @@ let Articles = (props) => {
 											/>
 											<div>{article.date}</div>
 										</CardContent>
-									</Card>
+									</ArticlesCard>
 								</Grid>
 							))}
 				</Grid>

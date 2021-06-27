@@ -10,9 +10,9 @@ li {
 
 ul > li > a {
 	font-size: x-large;
-	text-decoration: none;
 	vertical-align: middle;
 	margin-left: 0.5em;
+    color: #e76f51;
 }
 
 .navbar {

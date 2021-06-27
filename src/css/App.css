@@ -18,16 +18,10 @@
 
 .body {
 	font-family: "Baloo Bhai 2";
-	background-color: #edf2f4;
-	color: #2b2d42;
+	background-color: #264653;
+	color: #e9c46a;
 }
 
-.icon {
-	display: inline;
-	margin: 0em 1em;
-	vertical-align: middle;
-}
-
-.icon-header {
-	display: inline;
+.navLink {
+  text-decoration: none;
 }
