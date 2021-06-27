@@ -13,10 +13,6 @@ export default class Header extends Component {
 					<h1>{this.props.header.title}</h1>
 					<div>{this.props.header.tagline}</div>
 				</header>
-				<div className="links">
-					<a href={this.props.header.github}>Github</a>
-					<a href={this.props.header.linkedin}>Linkedin</a>
-				</div>
 			</>
 		)
 	}

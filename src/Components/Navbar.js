@@ -17,6 +17,12 @@ let Navbar = (props) => {
                             {tag.icon} <Link className="navLink" to={tag.link}>{tag.name}</Link>
                         </li>
                     ))}
+                <li>
+                    🏡 <a className="navLink" href={props.header.github}>Github</a>
+                </li>
+                <li>
+                    🏡 <a className="navLink" href={props.header.linkedin}>Linkedin</a>
+                </li>
             </ul>
         </div>
     )
@@ -26,4 +32,5 @@ export default Navbar;
 
 Navbar.propTypes = {
     tags: PropTypes.array,
+    header: PropTypes.object
 }

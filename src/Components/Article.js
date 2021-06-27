@@ -1,9 +1,9 @@
 import React from 'react'
-import { Paper } from "@material-ui/core";
 import PropTypes from "prop-types"
 import { useParams } from "react-router-dom"
 import '../css/Article.css'
 import { Helmet } from 'react-helmet'
+import ArticlePaper from '../Styles/AritclePaper'
 
 let Article = (props) => {
     let { name } = useParams();
@@ -14,14 +14,14 @@ let Article = (props) => {
             <Helmet>
                 <title>Atronandbeyond.com: {article.title}</title>
             </Helmet>
-            <Paper className="paper-article">
+            <ArticlePaper className="paper-article">
                 <h1>{article.title}</h1>
                 <p
                     dangerouslySetInnerHTML={{
                         __html: article.content
                     }}
                 />
-            </Paper>
+            </ArticlePaper>
         </>)
 }
 

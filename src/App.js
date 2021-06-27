@@ -28,7 +28,7 @@ class App extends Component {
 				<Container>
 					<Header header={this.state.header} tags={this.state.tags} />
 					<BrowserRouter>
-            <Navbar tags={this.state.tags} />
+            <Navbar tags={this.state.tags} header={this.state.header}/>
 						<Switch>
 							<Route path="/article/:name">
 								<Article
