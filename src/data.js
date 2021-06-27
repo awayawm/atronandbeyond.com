@@ -2,7 +2,7 @@ module.exports = {
   "header": {
     "title": "atronandbeyond.com",
     "tagline": "Beats and Code",
-    "github":"https://github.com/lakeoftea",
+    "github":"https://github.com/awayawm",
     "linkedin":"https://www.linkedin.com/in/aaron-myers-88b52683",
     "twitter":""
   },
