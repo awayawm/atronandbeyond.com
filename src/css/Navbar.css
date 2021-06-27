@@ -1,0 +1,22 @@
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+li {
+	display: inline;
+	padding-right: 3em;
+	flex-direction: row;
+}
+
+ul > li > a {
+	font-size: x-large;
+	text-decoration: none;
+	vertical-align: middle;
+	margin-left: 0.5em;
+}
+
+.navbar {
+	flex-direction: row;
+	justify-content: center;
+	display: flex;
+}

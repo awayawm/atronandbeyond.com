@@ -34,6 +34,7 @@ module.exports = {
     {
       enabled: true,
       title: "Reading PGN from the DGT Electronic Chessboard",
+      link: "reading-pgn-from-the-dgt-electronic-chessboard",
       tags: [1],
       date: "2021-06-20",
       content: `<p>The DGT Electronic Chess Board is capable of recording any games played on it into internal memory.  Each piece emits a 
@@ -58,7 +59,8 @@ and that's what we'll use in the code below.</p>
     },
     {
       enabled: true,
-      title: "UnityWebRequest and Tmp_Dropdown:  Making a dynamic dropdown in Unity",
+      title: "UnityWebRequest and Tmp_Dropdown: Making a dynamic dropdown in Unity",
+      link: "unitywebrequest-and-tmp-dropdown-making-a-dynamic-dropdown-in-unity",
       tags: [3],
       date: "2021-06-20",
       content: `When putting together a GUI in Unity you may need a dropdown and you don't know the value of the options 
@@ -72,6 +74,7 @@ http://jsonviewer.stack.hu/#http://lichess.org/api/team/all`
     {
       enabled: true,
       title: "Building a Discord Bot with Discord.js",
+      link: "building-a-discord-bot-with-discord-js",
       tags: [3],
       date: "2021-06-20",
       content: `If you've used discord you probably know there are discord bots for everything.  There are bots for playing music, gambling, managing roles and 
@@ -81,6 +84,7 @@ http://jsonviewer.stack.hu/#http://lichess.org/api/team/all`
     {
       enabled: true,
       title: "Checking Out Mc-707 Firmware update 1.72",
+      link: "checking-out-the-mc-707-fireware-update-1-72",
       tags: [2],
       date: "2021-06-20",
       content: `The MC-707 is a groovebox and one of Roland's DAWless music creation products.  I don't get this thing out nearly enough but when I do it's always 
@@ -92,6 +96,7 @@ http://jsonviewer.stack.hu/#http://lichess.org/api/team/all`
     {
       enabled: false,
       title: "Creating a Custom Toolchain for React",
+      link: "creating-a-custom-toolchain-for-react",
       tags: [3],
       date: "2021-06-20",
       content: `A recent humble bundle for front end development contained the last press of O'Reilly book Learning React.  Although you can run pure React by including react from 

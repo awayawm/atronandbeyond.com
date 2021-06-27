@@ -7,9 +7,10 @@ import "./css/App.css"
 import "@fontsource/baloo-bhai-2/400.css"
 import "@fontsource/baloo-bhai-2/500.css"
 import "@fontsource/baloo-bhai-2/700.css"
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { Helmet } from "react-helmet"
 import Article from './Components/Article'
+import Navbar from './Components/Navbar'
 
 class App extends Component {
 	constructor(props) {
@@ -27,20 +28,7 @@ class App extends Component {
 				<Container>
 					<Header header={this.state.header} tags={this.state.tags} />
 					<BrowserRouter>
-						<div className="navbar">
-							<ul>
-								<li>
-									🏡 <Link to={"/"}>Home</Link>
-								</li>
-								{this.state.tags
-									.filter((tag) => tag.enabled)
-									.map((tag, i) => (
-										<li key={i}>
-											{tag.icon} <Link to={tag.link}>{tag.name}</Link>
-										</li>
-									))}
-							</ul>
-						</div>
+            <Navbar tags={this.state.tags} />
 						<Switch>
 							<Route path="/article/:name">
 								<Article
