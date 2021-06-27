@@ -9,7 +9,7 @@ let Article = (props) => {
     let article = props.articles.find(article => article.title.toLowerCase().replace(/\s/g, '-') == name)
     console.log(`name ${name}, articles: ${JSON.stringify(article)}`)
 
-    return (<Paper className="article">
+    return (<Paper className="paper-article">
         <h1>{article.title}</h1>
         <p
             dangerouslySetInnerHTML={{

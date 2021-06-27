@@ -48,7 +48,7 @@ let Articles = (props) => {
 								<Grid item lg={6} key={i}>
 									<Card className="article">
 										<CardContent className="cardContent">
-											<h1><Link to={getLink(article.title)}>{article.title}</Link></h1>
+											<h1 className="icon-header"><Link to={getLink(article.title)}>{article.title}</Link></h1>
 											<div className="icon">
 												{article.tags.map(
 													(articleTag) =>

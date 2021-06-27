@@ -24,8 +24,12 @@
 
 .icon {
 	display: inline;
-	padding-right: 10px;
+	margin: 0em 1em;
 	vertical-align: middle;
+}
+
+.icon-header {
+	display: inline;
 }
 
 ul {
