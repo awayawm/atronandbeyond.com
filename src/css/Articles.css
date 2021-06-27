@@ -27,4 +27,15 @@ p {
 
 h1 > a {
   color: #f4a261;
+  text-decoration: none;
+}
+
+.icon {
+	display: inline;
+	margin: 0em 1em;
+	vertical-align: middle;
+}
+
+.icon-header {
+	display: inline;
 }

@@ -1,23 +1,25 @@
-ul {
-	list-style-type: none;
-	padding-left: 0px;
-}
-li {
-	display: inline;
-	padding-right: 3em;
-	flex-direction: row;
-}
-
-ul > li > a {
+.navbar-link {
 	font-size: x-large;
 	vertical-align: middle;
 	margin-left: 0.5em;
-    color: #e76f51;
+	color: #e76f51;
+	text-decoration: none;
 }
 
 .navbar {
 	flex-direction: row;
 	justify-content: center;
 	display: flex;
-    margin-bottom: 2em;
+	margin-bottom: 2em;
+}
+
+.navbar ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.navbar ul > li {
+	display: inline;
+	padding-right: 3em;
+	flex-direction: row;
 }

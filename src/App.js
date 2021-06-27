@@ -9,8 +9,8 @@ import "@fontsource/baloo-bhai-2/500.css"
 import "@fontsource/baloo-bhai-2/700.css"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { Helmet } from "react-helmet"
-import Article from './Components/Article'
-import Navbar from './Components/Navbar'
+import Article from "./Components/Article"
+import Navbar from "./Components/Navbar"
 
 class App extends Component {
 	constructor(props) {
@@ -28,7 +28,7 @@ class App extends Component {
 				<Container>
 					<Header header={this.state.header} tags={this.state.tags} />
 					<BrowserRouter>
-            <Navbar tags={this.state.tags} header={this.state.header}/>
+						<Navbar tags={this.state.tags} header={this.state.header} />
 						<Switch>
 							<Route path="/article/:name">
 								<Article

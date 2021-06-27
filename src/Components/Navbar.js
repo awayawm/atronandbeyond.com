@@ -8,20 +8,20 @@ let Navbar = (props) => {
         <div className="navbar">
             <ul>
                 <li>
-                    🏡 <Link className="navLink" to={"/"}>Home</Link>
+                    🏡 <Link className="navbar-link" to={"/"}>Home</Link>
                 </li>
                 {props.tags
                     .filter((tag) => tag.enabled)
                     .map((tag, i) => (
                         <li key={i}>
-                            {tag.icon} <Link className="navLink" to={tag.link}>{tag.name}</Link>
+                            {tag.icon} <Link className="navbar-link" to={tag.link}>{tag.name}</Link>
                         </li>
                     ))}
                 <li>
-                    🏡 <a className="navLink" href={props.header.github}>Github</a>
+                    🏡 <a className="navbar-link" href={props.header.github}>Github</a>
                 </li>
                 <li>
-                    🏡 <a className="navLink" href={props.header.linkedin}>Linkedin</a>
+                    🏡 <a className="navbar-link" href={props.header.linkedin}>Linkedin</a>
                 </li>
             </ul>
         </div>
