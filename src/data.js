@@ -54,7 +54,9 @@ read the pgn as is and can reconstruct the game in their head like Beth Harmon i
 Thanks to the number of chess libraries on Github it is easy to parse a pgn file.  Python-chess seems like the most feature rich open source project. It 
 has a ton of contributors and integrates with Polyglot, Syzeyg, and Stockfish easily.  It also has methods for traversing variations of the Pgn as a tree 
 which would be useful for game analysis. If you prefer javascript, chess.js a great choice too.  It has everything needed to do fun things with Pgn files 
-and that's what we'll use in the code below.</p>
+and that's what we'll use in the code below.
+</p>
+
 `,
 		},
 		{
