@@ -29,6 +29,13 @@ module.exports = {
 			enabled: true,
 			icon: "💻",
 		},
+		{
+			id: 4,
+			name: "Aws",
+			link: "/tags/aws",
+			enabled: true,
+			icon: "☁️",
+		},
 	],
 	articles: [
 		{
@@ -106,6 +113,33 @@ is used to make the network request and JsonUtility is used to serialize the res
 			content: `A recent humble bundle for front end development contained the last press of O'Reilly book Learning React.  Although you can run pure React by including react from 
       the CDN, it's common to use a toolchain to bring together a full ecosystems of packages that make developing with React easier. 
       This article is heavily inspired by <a href="https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658"/>this blog post</a>.`,
+		},
+		{
+			enabled: true,
+			title: "Mounting a Snapshot to an EC2 Machine",
+			link: "mounting-volume-made-from-snapshot-to-ec2",
+			tags: [4],
+			date: "2021-07-02",
+			content: `<p>If you make snapshots from the volumes of your ec2 machine then you may find yourself needing to mount one of those volumes one day to recover
+			some data.  We can never be sure when bad judgement will strike and something important will be deleted forever!  If regular snapshots are being created 
+			this data we can recovery these files in a few simple steps.</p>
+
+			<p>
+			Back in 2019 I migrated from OwnCloud to NextCloud.  Fast forward to 2021 and I'm still using a NextCloud and for whatever reason the old OwnCloud install was never
+			cleaned up.  As luck would have it while cleaning up what I thought were old files I discovered that the data/ directory 
+			for NextCloud is unfortunately using the data/ directory inside the OwnCloud directory!  Fortunately 
+			just a day ago I took a snapshop of the drive so recovery is easy.  First convert the snapshot into a volume.
+			</p>
+
+			<p>
+			sudo mount -o nouuid -t xfs /dev/xdf1 /mnt/backup
+			</p>
+			<ul>
+			<li><a href="https://forums.aws.amazon.com/thread.jspa?messageID=114594">Mounting EBS volume (mount: wrong fs type, bad option, bad superblock)</a></li>
+			<li><a href="https://bbs.archlinux.org/viewtopic.php?id=218883">[Solved] Nextcloud, change Data folder location</a></li>
+			<li><a href="https://docs.nextcloud.com/server/21/admin_manual//maintenance/migrating_owncloud.html">Migrating from ownCloud</a></li>
+			</ul>
+			`,
 		},
 	],
 }
