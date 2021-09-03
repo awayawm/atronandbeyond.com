@@ -12,8 +12,8 @@ let Articles = (props) => {
 	let { name } = useParams()
 	let articles
 	let title;
-	if (name != undefined) {
-		let id = props.tags.find((tag) => tag.name == _.startCase(name)).id
+	if (name !== undefined) {
+		let id = props.tags.find((tag) => tag.name === _.startCase(name)).id
 		// console.log(`name: ${name}, id: ${id}, article.tags ${JSON.stringify(props.articles)}`)
 		articles = props.articles.filter((article) => article.tags.includes(id))
 		title = `Atronandbeyond.com: ${_.startCase(name)}`
@@ -50,7 +50,7 @@ let Articles = (props) => {
 											<div className="icon">
 												{article.tags.map(
 													(articleTag) =>
-														_.find(props.tags, (tag) => articleTag == tag.id).icon
+														_.find(props.tags, (tag) => articleTag === tag.id).icon
 												)}
 											</div>
 											<p
