@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React  from "react"
 import * as data from "./data"
 import Header from "./Components/Header"
 import Articles from "./Components/Articles"
@@ -12,13 +12,7 @@ import { Helmet } from "react-helmet"
 import Article from "./Components/Article"
 import Navbar from "./Components/Navbar"
 
-class App extends Component {
-	constructor(props) {
-		super(props)
-		this.state = { ...data }
-	}
-
-	render() {
+let App = () => {
 		return (
 			<>
 				<Helmet>
@@ -26,26 +20,26 @@ class App extends Component {
 				</Helmet>
 				<CssBaseline />
 				<Container>
-					<Header header={this.state.header} tags={this.state.tags} />
+					<Header header={data.header} tags={data.tags} />
 					<BrowserRouter>
-						<Navbar tags={this.state.tags} header={this.state.header} />
+						<Navbar tags={data.tags} header={data.header} />
 						<Switch>
 							<Route path="/article/:name">
 								<Article
-									articles={this.state.articles}
-									tags={this.state.tags}
+									articles={data.articles}
+									tags={data.tags}
 								/>
 							</Route>
 							<Route path="/tags/:name">
 								<Articles
-									articles={this.state.articles}
-									tags={this.state.tags}
+									articles={data.articles}
+									tags={data.tags}
 								/>
 							</Route>
 							<Route exact path="/">
 								<Articles
-									articles={this.state.articles}
-									tags={this.state.tags}
+									articles={data.articles}
+									tags={data.tags}
 								/>
 							</Route>
 						</Switch>
@@ -53,7 +47,6 @@ class App extends Component {
 				</Container>
 			</>
 		)
-	}
 }
 
-export default App
+export default App;
