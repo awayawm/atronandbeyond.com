@@ -7,7 +7,7 @@ import ArticlePaper from "../Styles/AritclePaper"
 
 let Article = (props) => {
 	let { name } = useParams()
-	let article = props.articles.find((article) => article.link == name)
+	let article = props.articles.find((article) => article.link === name)
 	// console.log(`name ${name}, articles: ${JSON.stringify(article)}`)
 	return (
 		<>
