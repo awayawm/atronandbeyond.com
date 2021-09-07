@@ -9,7 +9,8 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: "/src/index.js",
-    mode: isDevelopment ? 'development' : 'production',
+    //mode: isDevelopment ? 'development' : 'production',
+    mode: 'production', // issue with webpack 5 and react-markdown https://github.com/remarkjs/remark/discussions/831
     module: {
         rules: [
             {
@@ -31,10 +32,21 @@ module.exports = {
                     name: '[name].[ext]',
                     outputPath: 'fonts/'
                 }
+            },
+            {
+                test: /\.(md)$/,
+                loader: "file-loader",
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'md/'
+                }
             }
         ]
     },
-    resolve: { extensions: ["*", ".js", ".jsx"] },
+    resolve: {
+        extensions: ["*", ".js", ".jsx"],
+        //fallback: {"assert": false}
+    },
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "../dist/",
@@ -52,7 +64,7 @@ module.exports = {
         isDevelopment && new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            meta: { viewport: "minimum-scale=1, initial-scale=1, width=device-width" }
+            meta: {viewport: "minimum-scale=1, initial-scale=1, width=device-width"}
         }),
         new ESLintPlugin()
     ].filter(Boolean),
@@ -60,5 +72,5 @@ module.exports = {
         minimize: true,
         minimizer: [new TerserPlugin()]
     },
-    // externals: ["react-helmet"]
+// externals: ["react-helmet"]
 };

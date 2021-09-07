@@ -1,5 +1,5 @@
 import React from "react"
-import * as data from "./data"
+import data from "./data"
 import Header from "./Components/Header"
 import Articles from "./Components/Articles"
 import {CssBaseline, Container} from "@material-ui/core"
