@@ -1,5 +1,5 @@
 import React from "react"
-import data from "./data"
+import config from "./config"
 import Header from "./Components/Header"
 import Articles from "./Components/Articles"
 import {CssBaseline, Container} from "@material-ui/core"
@@ -20,26 +20,26 @@ let App = () => {
             </Helmet>
             <CssBaseline/>
             <Container>
-                <Header header={data.header} tags={data.tags}/>
+                <Header header={config.header} tags={config.tags}/>
                 <BrowserRouter>
-                    <Navbar tags={data.tags} header={data.header}/>
+                    <Navbar tags={config.tags} header={config.header}/>
                     <Switch>
                         <Route path="/article/:name">
                             <Article
-                                articles={data.articles}
-                                tags={data.tags}
+                                articles={config.articles}
+                                tags={config.tags}
                             />
                         </Route>
                         <Route path="/tags/:name">
                             <Articles
-                                articles={data.articles}
-                                tags={data.tags}
+                                articles={config.articles}
+                                tags={config.tags}
                             />
                         </Route>
                         <Route exact path="/">
                             <Articles
-                                articles={data.articles}
-                                tags={data.tags}
+                                articles={config.articles}
+                                tags={config.tags}
                             />
                         </Route>
                     </Switch>

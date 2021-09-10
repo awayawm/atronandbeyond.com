@@ -5,7 +5,7 @@ import checking_out_the_mc_707_fireware_update_1_72 from './markdown/checking-ou
 import creating_a_custom_toolchain_for_react from './markdown/creating-a-custom-toolchain-for-react.md'
 import mounting_volume_made_from_snapshot_to_ec2 from './markdown/mounting-volume-made-from-snapshot-to-ec2.md'
 
-let data = {
+let config = {
 	header: {
 		title: "atronandbeyond.com",
 		tagline: "Beats and Code",
@@ -54,7 +54,7 @@ let data = {
 			content: reading_pgn_from_the_dgt_electronic_chessboard,
 		},
 		{
-			enabled: true,
+			enabled: false,
 			title:
 				"UnityWebRequest and Tmp_Dropdown: Making a dynamic dropdown in Unity",
 			link: "unitywebrequest-and-tmp-dropdown-making-a-dynamic-dropdown-in-unity",
@@ -96,4 +96,4 @@ let data = {
 		},
 	],
 }
-export default data;
+export default config;
