@@ -17,13 +17,10 @@ let WithData = (ComposedElement) => {
                     name: name
                 }
             }
-            // console.log(this.state)
         }
 
         componentDidMount() {
             //https://dev.to/anobjectisa/how-to-dynamically-load-markdown-files-in-react-markdown-to-jsx-53fl
-            // console.log(this.state)
-            // let url = this.props.article ? this.props.article.content
             fetch(this.state.article.content)
                 .then((response) =>
                     response.text()
