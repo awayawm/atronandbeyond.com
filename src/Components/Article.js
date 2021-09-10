@@ -5,54 +5,35 @@ import {Helmet} from "react-helmet"
 import ArticlePaper from "../Styles/AritclePaper"
 import {withRouter} from "react-router-dom"
 import ReactMarkdown from "react-markdown";
+import withData from './withData'
 
 class Article extends Component {
     constructor(props) {
         super(props)
-        let name = props.match.params.name
-        let article = props.articles.find((article) => article.link === name)
-        console.log(article)
-        this.state = {
-            article: article,
-            name: name
-        }
-    }
-
-    componentDidMount() {
-        // console.log(markdown)
-        //https://dev.to/anobjectisa/how-to-dynamically-load-markdown-files-in-react-markdown-to-jsx-53fl
-        fetch(this.state.article.content)
-            .then((response) =>
-                response.text()
-            )
-            .then((data) => {
-                    this.setState({data: data});
-                    // console.log(data);
-                }
-            )
     }
 
     render() {
-        // console.log(`name ${name}, articles: ${JSON.stringify(article)}`)
         return (
             <>
                 <Helmet>
-                    <title>Atronandbeyond.com: {this.state.article.title}</title>
+                    <title>Atronandbeyond.com: {this.props.article.title}</title>
                 </Helmet>
                 <ArticlePaper className="paper-article">
-                    <h1>{this.state.article.title}</h1>
+                    <h1>{this.props.article.title}</h1>
                     {/* eslint-disable-next-line react/no-children-prop */}
-                    <ReactMarkdown children={this.state.data}/>
+                    <ReactMarkdown children={this.props.data}/>
                 </ArticlePaper>
             </>
         )
     }
 }
 
-export default withRouter(Article)
+export default withRouter(withData(Article));
 
 Article.propTypes = {
     articles: PropTypes.array,
     tags: PropTypes.array,
     match: PropTypes.object,
+    data: PropTypes.string,
+    article: PropTypes.object
 }
