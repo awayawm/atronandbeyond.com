@@ -6,6 +6,7 @@ import {useParams} from "react-router-dom"
 import PropTypes from "prop-types"
 import {Helmet} from "react-helmet"
 import ArticlePreview from "./ArticlePreview";
+import Footer from "./Footer";
 
 let Articles = (props) => {
     let {name} = useParams()
@@ -20,6 +21,7 @@ let Articles = (props) => {
         articles = props.articles
         title = `Atronandbeyond.com: Beats and Code`
     }
+    console.log(props)
     return (
         <>
             <Helmet>
@@ -48,6 +50,7 @@ let Articles = (props) => {
                             ))}
                 </Grid>
             </div>
+            <Footer {...props}/>
         </>
     )
 }

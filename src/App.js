@@ -28,18 +28,21 @@ let App = () => {
                             <Article
                                 articles={config.articles}
                                 tags={config.tags}
+                                footer={config.footer}
                             />
                         </Route>
                         <Route path="/tags/:name">
                             <Articles
                                 articles={config.articles}
                                 tags={config.tags}
+                                footer={config.footer}
                             />
                         </Route>
                         <Route exact path="/">
                             <Articles
                                 articles={config.articles}
                                 tags={config.tags}
+                                footer={config.footer}
                             />
                         </Route>
                     </Switch>

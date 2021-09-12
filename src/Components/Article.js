@@ -6,6 +6,7 @@ import ArticlePaper from "../Styles/AritclePaper"
 import {withRouter} from "react-router-dom"
 import ReactMarkdown from "react-markdown";
 import withData from './withData'
+import Footer from "./Footer";
 
 let Article = (props) => {
     return (
@@ -18,6 +19,7 @@ let Article = (props) => {
                 {/* eslint-disable-next-line react/no-children-prop */}
                 <ReactMarkdown children={props.data}/>
             </ArticlePaper>
+            <Footer {...props} />
         </>
     )
 }

@@ -13,7 +13,7 @@ let config = {
 		linkedin: "https://www.linkedin.com/in/aaron-myers-88b52683",
 		twitter: "",
 	},
-	footer: {},
+	footer: { tagline: 'atronandbeyond.com © 2021'},
 	tags: [
 		{
 			id: 1,
