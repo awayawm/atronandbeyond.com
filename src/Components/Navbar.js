@@ -17,12 +17,6 @@ let Navbar = (props) => {
                             {tag.icon} <Link className="navbar-link" to={tag.link}>{tag.name}</Link>
                         </li>
                     ))}
-                <li>
-                    🏡 <a className="navbar-link" href={props.header.github}>Github</a>
-                </li>
-                <li>
-                    🏡 <a className="navbar-link" href={props.header.linkedin}>Linkedin</a>
-                </li>
             </ul>
         </div>
     )

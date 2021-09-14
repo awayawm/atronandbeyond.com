@@ -10,7 +10,7 @@ import '../css/Articles.css'
 
 let ArticlePreview = (props) => {
     return (
-        <ArticlesCard className="article-preview">
+        <ArticlesCard className="articles-card">
             <CardContent className="cardContent">
                 <h1 className="icon-header"><Link className="navLink"
                                                   to={`/article/${props.article.link}`}>{props.article.title}</Link>
