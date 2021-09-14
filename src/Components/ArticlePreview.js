@@ -10,7 +10,7 @@ import '../css/Articles.css'
 
 let ArticlePreview = (props) => {
     return (
-        <ArticlesCard className="article">
+        <ArticlesCard className="article-preview">
             <CardContent className="cardContent">
                 <h1 className="icon-header"><Link className="navLink"
                                                   to={`/article/${props.article.link}`}>{props.article.title}</Link>
@@ -22,8 +22,8 @@ let ArticlePreview = (props) => {
                     )}
                 </div>
                 {/* eslint-disable-next-line react/no-children-prop */}
-                <ReactMarkdown children={_.truncate(props.data, {length: 250})}/>
-                <div>{props.article.date}</div>
+                <ReactMarkdown className="article-preview-text" children={_.truncate(props.data, {length: 250})}/>
+                <div className="date">{props.article.date}</div>
             </CardContent>
         </ArticlesCard>
     )

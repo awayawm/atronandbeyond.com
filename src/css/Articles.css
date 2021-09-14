@@ -9,11 +9,11 @@ header > div {
   display: inline;
 }
 
-p {
-  font-size: larger;
+.article-preview-text {
+  font-size: 1.4em;
 }
 
-.article {
+.article-preview {
   margin-bottom: 1em;
 }
 
@@ -38,4 +38,9 @@ h1 > a {
 
 .icon-header {
 	display: inline;
+}
+
+.date {
+    font-size: 1.2em;
+    text-align: right;
 }
