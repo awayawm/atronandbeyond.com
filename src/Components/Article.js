@@ -14,10 +14,12 @@ let Article = (props) => {
             <Helmet>
                 <title>Atronandbeyond.com: {props.article.title}</title>
             </Helmet>
-            <ArticlePaper className="paper-article">
+            <ArticlePaper className="paper-article article">
                 <h1>{props.article.title}</h1>
                 {/* eslint-disable-next-line react/no-children-prop */}
-                <ReactMarkdown children={props.data}/>
+                <ReactMarkdown>
+                    {props.data}
+                </ReactMarkdown>
             </ArticlePaper>
             <Footer {...props} />
         </>

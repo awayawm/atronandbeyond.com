@@ -6,6 +6,7 @@ import _ from "lodash";
 import ReactMarkdown from "react-markdown";
 import PropTypes from "prop-types";
 import withData from './withData'
+import '../css/Articles.css'
 
 let ArticlePreview = (props) => {
     return (

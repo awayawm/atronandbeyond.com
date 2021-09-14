@@ -2,7 +2,7 @@ The DGT Electronic Chess Board is capable of recording any games played on it in
 faint RFID signal and the board contains a mesh sensor that detects the presence of any pieces placed on top of it.  The piece needs to be directly 
 on top of a square for the move to register.  In rare cases the board can register ghost pieces and from radio interference.  The data on the board can be read 
 by a chess program like Fritz or can be simply written to disk for archiving or future analysis.  DGT releases a few programs along with the board
- that are supposed to make connecting the board to your computer easy.  RabbitQueen is helpful for dumping the board memory (readonly) and configuring   
+ that are supposed to make connecting the board to your computer easy.  RabbitQueen is helpful for dumping the board memory (readonly) and configuring 
 internal parameters.  RabbitConnect and RabbitPlugin allow you to connect the board to chess programs like Fritz.  
 
 Of the programs DGT provides, LiveChess is the most interesting.  It is used capture the live games played by multiple DGT boards 
