@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import '../css/Navbar.css'
+import NavItem from "./NavItem";
 
 let Navbar = (props) => {
     return (
@@ -13,9 +14,7 @@ let Navbar = (props) => {
                 {props.tags
                     .filter((tag) => tag.enabled)
                     .map((tag, i) => (
-                        <li key={i}>
-                            {tag.icon} <Link className="navbar-link" to={tag.link}>{tag.name}</Link>
-                        </li>
+                        <NavItem key={i} tag={tag}/>
                     ))}
             </ul>
         </div>
