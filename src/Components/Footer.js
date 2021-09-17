@@ -14,10 +14,10 @@ export default class Footer extends Component {
                     {this.props.footer.tagline}
                 </li>
                 <li>
-                    🏡 <a className="navbar-link" href={this.props.footer.github}>Github</a>
+                    <a href={this.props.footer.github} target="_blank" rel="noreferrer">Github</a>
                 </li>
                 <li>
-                    🏡 <a className="navbar-link" href={this.props.footer.linkedin}>Linkedin</a>
+                    <a href={this.props.footer.linkedin} target="_blank" rel="noreferrer">Linkedin</a>
                 </li>
             </ul>
         )
