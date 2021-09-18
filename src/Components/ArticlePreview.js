@@ -17,7 +17,7 @@ let ArticlePreview = (props) => {
                           to={`/article/${props.article.link}`}>{props.article.title}</Link>
                 </h1>
                 {/* eslint-disable-next-line react/no-children-prop */}
-                <ReactMarkdown className="article-preview-text" children={_.truncate(props.data, {length: 250})}/>
+                <ReactMarkdown className="article-preview-text" children={_.truncate(props.data, {length: props.article.preview_length})}/>
                 <div className="date">{props.article.date}</div>
             </CardContent>
         </ArticlesCard>

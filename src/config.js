@@ -64,6 +64,7 @@ let config = {
             tags: [1, 2],
             date: "2021-06-20",
             content: reading_pgn_from_the_dgt_electronic_chessboard,
+            preview_length: 300
         },
         {
             enabled: false,
@@ -73,6 +74,7 @@ let config = {
             tags: [3],
             date: "2021-06-20",
             content: unitywebrequest_and_tmp_dropdown_making_a_dynamic_dropdown_in_unity,
+            preview_length: 300
         },
         {
             enabled: true,
@@ -81,6 +83,7 @@ let config = {
             tags: [1, 4],
             date: "2021-06-20",
             content: building_a_discord_bot_with_discord_js,
+            preview_length: 300
         },
         {
             enabled: false,
@@ -89,6 +92,7 @@ let config = {
             tags: [2],
             date: "2021-06-20",
             content: checking_out_the_mc_707_fireware_update_1_72,
+            preview_length: 300
         },
         {
             enabled: false,
@@ -97,6 +101,7 @@ let config = {
             tags: [3],
             date: "2021-06-20",
             content: creating_a_custom_toolchain_for_react,
+            preview_length: 300
         },
         {
             enabled: true,
@@ -105,6 +110,7 @@ let config = {
             tags: [1, 5],
             date: "2021-07-02",
             content: mounting_volume_made_from_snapshot_to_ec2,
+            preview_length: 300
         },
     ],
 }
