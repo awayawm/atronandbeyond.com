@@ -1,22 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import '../css/Navbar.css'
 import NavItem from "./NavItem";
+import {Grid} from "@material-ui/core";
 
 let Navbar = (props) => {
     return (
         <div className="navbar">
-            <ul>
-                <li>
-                    🏡 <Link className="navbar-link" to={"/"}>Home</Link>
-                </li>
-                {props.tags
-                    .filter((tag) => tag.enabled)
-                    .map((tag, i) => (
-                        <NavItem key={i} tag={tag}/>
-                    ))}
-            </ul>
+            <Grid container spacing={4}>
+            {props.tags
+                .filter((tag) => tag.enabled)
+                .map((tag, i) => (
+                    <NavItem key={i} tag={tag}/>
+                ))}
+            </Grid>
         </div>
     )
 }

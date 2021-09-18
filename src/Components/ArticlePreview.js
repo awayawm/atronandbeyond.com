@@ -15,12 +15,6 @@ let ArticlePreview = (props) => {
                 <h1 className="icon-header"><Link className="navLink"
                                                   to={`/article/${props.article.link}`}>{props.article.title}</Link>
                 </h1>
-                <div className="icon">
-                    {props.article.tags.map(
-                        (articleTag) =>
-                            _.find(props.tags, (tag) => articleTag === tag.id).icon
-                    )}
-                </div>
                 {/* eslint-disable-next-line react/no-children-prop */}
                 <ReactMarkdown className="article-preview-text" children={_.truncate(props.data, {length: 250})}/>
                 <div className="date">{props.article.date}</div>

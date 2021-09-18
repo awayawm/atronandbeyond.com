@@ -1,12 +1,15 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
+import {Grid} from "@material-ui/core";
 
 let NavItem = (props) => {
-    return(
-        <li key={props.key}>
-            {props.tag.icon} <Link className="navbar-link" to={props.tag.link}>{props.tag.name}</Link>
-        </li>
+    return (
+        <Grid xs={3} key={props.key}>
+            <div className="navbar-item">
+                {props.tag.icon} <Link className="navbar-link" to={props.tag.link}>{props.tag.name}</Link>
+            </div>
+        </Grid>
     )
 }
 
