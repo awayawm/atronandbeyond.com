@@ -6,6 +6,8 @@ import building_a_discord_bot_with_discord_js from './markdown/building-a-discor
 import checking_out_the_mc_707_fireware_update_1_72 from './markdown/checking-out-the-mc-707-fireware-update-1-72.md'
 import creating_a_custom_toolchain_for_react from './markdown/creating-a-custom-toolchain-for-react.md'
 import mounting_volume_made_from_snapshot_to_ec2 from './markdown/mounting-volume-made-from-snapshot-to-ec2.md'
+import recording_audio_over_usb_otg_with_the_mc_707
+    from './markdown/recording-audio-over-usb-otg-with-the-mc-707.md'
 
 let config = {
     header: {
@@ -30,14 +32,14 @@ let config = {
             id: 2,
             name: "Chess",
             link: "/tags/chess",
-            enabled: true,
+            enabled: false,
             icon: "♟️",
         },
         {
             id: 3,
             name: "Beats",
             link: "/tags/beats",
-            enabled: false,
+            enabled: true,
             icon: "🎶",
         },
         {
@@ -61,7 +63,7 @@ let config = {
             enabled: true,
             title: "Reading PGN from the DGT Electronic Chessboard",
             link: "reading-pgn-from-the-dgt-electronic-chessboard",
-            tags: [1, 2],
+            tags: [1, 2, 4],
             date: "2021-06-20",
             content: reading_pgn_from_the_dgt_electronic_chessboard,
             preview_length: 300
@@ -107,9 +109,18 @@ let config = {
             enabled: true,
             title: "Mounting a Snapshot to an EC2 Machine",
             link: "mounting-volume-made-from-snapshot-to-ec2",
-            tags: [1, 5],
+            tags: [1, 5, 4],
             date: "2021-07-02",
             content: mounting_volume_made_from_snapshot_to_ec2,
+            preview_length: 300
+        },
+        {
+            enabled: true,
+            title: "Recording Audio Over USB-OTG with the MC-707",
+            link: "recording-audio-over-usb-otg-with-the-mc-707",
+            tags: [1, 3],
+            date: "2021-09-18",
+            content: recording_audio_over_usb_otg_with_the_mc_707,
             preview_length: 300
         },
     ],

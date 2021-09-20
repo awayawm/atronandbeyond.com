@@ -10,10 +10,9 @@ A blog written in React
 
 ## todo
 
-1. refactor navbar
-2. animate components on mount/unmount
-3. analytics
-4. update style 
-5. add rss feed
-6. use material ui theme
-7. migrate styles to material ui
+1. animate components on mount/unmount
+2. analytics
+3. update style 
+4. add rss feed
+5. use material ui theme
+6. migrate styles to material ui
