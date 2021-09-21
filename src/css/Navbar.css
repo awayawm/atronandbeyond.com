@@ -9,7 +9,7 @@
 .navbar {
 	flex-direction: row;
 	justify-content: center;
-	margin: 3em 0;
+	margin: 3em 20%;
 }
 
 .navbar-item {

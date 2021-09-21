@@ -53,7 +53,7 @@ let config = {
             id: 5,
             name: "Aws",
             link: "/tags/aws",
-            enabled: true,
+            enabled: false,
             icon: "☁️",
         },
 

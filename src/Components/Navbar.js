@@ -8,17 +8,11 @@ let Navbar = (props) => {
     return (
         <div className="navbar">
             <Grid container spacing={4}>
-                <Grid xs={2}>
-                </Grid>
-                <Grid container xs={8}>
-                    {props.tags
-                        .filter((tag) => tag.enabled)
-                        .map((tag, i) => (
-                            <NavItem key={i} tag={tag}/>
-                        ))}
-                </Grid>
-                <Grid xs={2}>
-                </Grid>
+                {props.tags
+                    .filter((tag) => tag.enabled)
+                    .map((tag, i) => (
+                        <NavItem key={i} tag={tag}/>
+                    ))}
             </Grid>
         </div>
     )
