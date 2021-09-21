@@ -5,8 +5,8 @@ import {Grid} from "@material-ui/core"
 import {useParams} from "react-router-dom"
 import PropTypes from "prop-types"
 import {Helmet} from "react-helmet"
-import ArticlePreview from "./ArticlePreview";
 import Footer from "./Footer";
+import ArticlePreview from "./ArticlePreview";
 
 let Articles = (props) => {
     let {name} = useParams()
@@ -22,6 +22,7 @@ let Articles = (props) => {
         title = `Atronandbeyond.com: Beats and Code`
     }
     console.log(props)
+
     return (
         <>
             <Helmet>

@@ -10,9 +10,8 @@ A blog written in React
 
 ## todo
 
-1. animate components on mount/unmount
-2. analytics
-3. update style 
-4. add rss feed
-5. use material ui theme
-6. migrate styles to material ui
+1. analytics
+2. add rss feed
+3. use material ui theme
+4. migrate styles to material ui
+5. add favicon

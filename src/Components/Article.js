@@ -7,20 +7,27 @@ import {withRouter} from "react-router-dom"
 import ReactMarkdown from "react-markdown";
 import withData from './withData'
 import Footer from "./Footer";
+import {animated, config, useSpring} from "react-spring";
 
 let Article = (props) => {
+    let headerSpring = useSpring({
+        from: {x: -20, opacity:0},
+        to: {x: 0, opacity:1},
+        config: config.slow
+    })
+    let AnimatedPaper = animated(ArticlePaper)
     return (
         <>
             <Helmet>
                 <title>Atronandbeyond.com: {props.article.title}</title>
             </Helmet>
-            <ArticlePaper className="paper-article article">
+            <AnimatedPaper style={headerSpring} className="paper-article article">
                 <h1>{props.article.title}</h1>
                 {/* eslint-disable-next-line react/no-children-prop */}
                 <ReactMarkdown>
                     {props.data}
                 </ReactMarkdown>
-            </ArticlePaper>
+            </AnimatedPaper>
             <Footer {...props} />
         </>
     )
