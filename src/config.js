@@ -66,7 +66,7 @@ let config = {
             tags: [1, 2, 4],
             date: "2021-06-20",
             content: reading_pgn_from_the_dgt_electronic_chessboard,
-            preview_length: 300
+            preview_length: 335
         },
         {
             enabled: false,
