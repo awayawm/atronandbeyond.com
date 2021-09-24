@@ -11,8 +11,14 @@ import {BrowserRouter, Switch, Route} from "react-router-dom"
 import {Helmet} from "react-helmet"
 import Article from "./Components/Article"
 import Navbar from "./Components/Navbar"
+import _ from "lodash";
 
 let App = () => {
+
+    let getTagIdFromName = (tags, match) => {
+        return tags.find((tag) => tag.name === _.startCase(match.params.name)).id
+    }
+
     return (
         <>
             <Helmet>
@@ -31,12 +37,13 @@ let App = () => {
                                 footer={config.footer}
                             />
                         </Route>
-                        <Route path="/tags/:name">
+                        <Route path="/tags/:name" render={({match}) =>(
                             <Articles
-                                articles={config.articles}
+                                articles={config.articles.filter((article) => article.tags.includes(getTagIdFromName(config.tags, match)))}
                                 tags={config.tags}
                                 footer={config.footer}
                             />
+                        )}>
                         </Route>
                         <Route exact path="/">
                             <Articles
