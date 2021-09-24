@@ -12,6 +12,7 @@ import {Helmet} from "react-helmet"
 import Article from "./Components/Article"
 import Navbar from "./Components/Navbar"
 import _ from "lodash";
+import Favicon from "react-favicon";
 
 let App = () => {
 
@@ -24,6 +25,7 @@ let App = () => {
             <Helmet>
                 <body className="body"/>
             </Helmet>
+            <Favicon url={config.favicon} />
             <CssBaseline/>
             <Container>
                 <Header header={config.header} tags={config.tags}/>
@@ -35,6 +37,7 @@ let App = () => {
                                 articles={config.articles}
                                 tags={config.tags}
                                 footer={config.footer}
+                                header={config.header}
                             />
                         </Route>
                         <Route path="/tags/:name" render={({match}) =>(
@@ -42,6 +45,7 @@ let App = () => {
                                 articles={config.articles.filter((article) => article.tags.includes(getTagIdFromName(config.tags, match)))}
                                 tags={config.tags}
                                 footer={config.footer}
+                                header={config.header}
                             />
                         )}>
                         </Route>
@@ -50,6 +54,7 @@ let App = () => {
                                 articles={config.articles}
                                 tags={config.tags}
                                 footer={config.footer}
+                                header={config.header}
                             />
                         </Route>
                     </Switch>

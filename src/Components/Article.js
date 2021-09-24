@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "../css/Article.css"
-import {Helmet} from "react-helmet"
 import ArticlePaper from "../Styles/AritclePaper"
 import ReactMarkdown from "react-markdown";
 import withData from './withData'
 import Footer from "./Footer";
 import {animated, config, useSpring} from "react-spring";
+import {Helmet} from "react-helmet";
 
 let Article = (props) => {
     let headerSpring = useSpring({
@@ -18,12 +18,11 @@ let Article = (props) => {
     return (
         <>
             <Helmet>
-                <title>Atronandbeyond.com: {props.article.title}</title>
+                <title>{props.header.title}: {props.article.title}</title>
             </Helmet>
             <AnimatedPaper style={headerSpring} className="paper-article article">
                 <h1>{props.article.title}</h1>
-                {/* eslint-disable-next-line react/no-children-prop */}
-                <ReactMarkdown>
+                <ReactMarkdown linkTarget="_blank">
                     {props.data}
                 </ReactMarkdown>
             </AnimatedPaper>
@@ -36,5 +35,6 @@ export default withData(Article);
 
 Article.propTypes = {
     data: PropTypes.string,
-    article: PropTypes.object
+    article: PropTypes.object,
+    header: PropTypes.object
 }

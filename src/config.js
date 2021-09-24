@@ -10,6 +10,7 @@ import recording_audio_over_usb_otg_with_the_mc_707
     from './markdown/recording-audio-over-usb-otg-with-the-mc-707.md'
 
 let config = {
+    favicon: "https://s3.us-west-2.amazonaws.com/atronandbeyond.com/favicon.ico",
     header: {
         title: "atronandbeyond.com",
         tagline: "Beats and Code"
@@ -66,7 +67,7 @@ let config = {
             tags: [1, 2, 4],
             date: "2021-06-20",
             content: reading_pgn_from_the_dgt_electronic_chessboard,
-            preview_length: 335
+            preview_length: 450
         },
         {
             enabled: false,

@@ -11,7 +11,7 @@ let Articles = (props) => {
     return (
         <>
             <Helmet>
-                <title>{props.title}</title>
+                <title>{props.header.title}</title>
             </Helmet>
             <div className="articleGrid">
                 <Grid container spacing={2}>
@@ -48,5 +48,6 @@ Articles.propTypes = {
     articles: PropTypes.array,
     tags: PropTypes.array,
     title: PropTypes.string,
-    hasArticles: PropTypes.bool
+    hasArticles: PropTypes.bool,
+    header: PropTypes.object
 }
