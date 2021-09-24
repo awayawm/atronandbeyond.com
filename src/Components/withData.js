@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import {withRouter} from "react-router-dom";
 
 let WithData = (ComposedElement) => {
     class WithData extends Component {
@@ -20,8 +21,6 @@ let WithData = (ComposedElement) => {
         }
 
         componentDidMount() {
-            console.log("WithData componentDidMount")
-            //https://dev.to/anobjectisa/how-to-dynamically-load-markdown-files-in-react-markdown-to-jsx-53fl
             fetch(this.state.article.content)
                 .then((response) =>
                     response.text()
@@ -43,7 +42,7 @@ let WithData = (ComposedElement) => {
         articles: PropTypes.array,
         match: PropTypes.object,
     }
-    return WithData;
+    return withRouter(WithData);
 }
 
 export default WithData;
