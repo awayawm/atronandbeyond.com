@@ -1,5 +1,5 @@
-import { Card } from '@material-ui/core'
 import styled from "@emotion/styled";
+import {Card} from "@mui/material";
 
 let ArticlesCard = styled(Card)`
   background-color: #2a9d8f;

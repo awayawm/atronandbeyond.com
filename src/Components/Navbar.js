@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../css/Navbar.css'
 import NavItem from "./NavItem";
-import {Grid} from "@material-ui/core";
+import {Grid} from "@mui/material";
 
 let Navbar = (props) => {
     return (

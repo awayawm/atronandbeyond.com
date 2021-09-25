@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "../css/Header.css"
 import {animated, config, useSpring} from "react-spring";
-import {Typography} from "@material-ui/core";
+import {Typography} from "@mui/material";
 
 let Header = (props) => {
 

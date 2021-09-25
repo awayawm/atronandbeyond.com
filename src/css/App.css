@@ -1,23 +1,4 @@
-@font-face {
-	font-family: "Baloo Bhai 2";
-	font-weight: 400;
-	src: url("../../dist/fonts/baloo-bhai-2-all-400-normal.woff") format("woff2");
-}
-
-@font-face {
-	font-family: "Baloo Bhai 2";
-	font-weight: 500;
-	src: url("../../dist/fonts/baloo-bhai-2-all-500-normal.woff") format("woff2");
-}
-
-@font-face {
-	font-family: "Baloo Bhai 2";
-	font-weight: 700;
-	src: url("../../dist/fonts/baloo-bhai-2-all-700-normal.woff") format("woff");
-}
-
 .body {
-	/*font-family: "Baloo Bhai 2";*/
 	background-color: #264653;
 	color: #e9c46a;
 }

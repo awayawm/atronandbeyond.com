@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
-import {Grid} from "@material-ui/core";
+import {Grid} from "@mui/material";
 
 let NavItem = (props) => {
     return (

@@ -2,55 +2,28 @@ import React from "react"
 import config from "./config"
 import Header from "./Components/Header"
 import Articles from "./Components/Articles"
-import {CssBaseline, Container} from "@material-ui/core"
 import "./css/App.css"
-import "@fontsource/baloo-bhai-2/400.css"
-import "@fontsource/baloo-bhai-2/500.css"
-import "@fontsource/baloo-bhai-2/700.css"
-
-import BalooBhai2 from '@fontsource/baloo-bhai-2'
-
-import {BrowserRouter, Switch, Route} from "react-router-dom"
+import {BrowserRouter, Route, Switch} from "react-router-dom"
 import {Helmet} from "react-helmet"
 import Article from "./Components/Article"
 import Navbar from "./Components/Navbar"
 import _ from "lodash";
 import Favicon from "react-favicon";
-import {createTheme, ThemeProvider} from "@mui/material";
+import {Container, CssBaseline, ThemeProvider} from "@mui/material";
+import {theme} from './themes/DefaultTheme'
 
 let App = () => {
-
-    let theme = createTheme({
-        typography: {
-            fontFamily: [
-                'Baloo Bhai 2',
-                'Roboto',
-                'Arial',
-                'sans-serif'
-            ].join(','),
-        },
-        components: {
-            MuiCssBaseline: {
-                styleOverrides: `
-                    @font-face {
-                        src: url(${BalooBhai2})
-                    }
-                `
-            }
-        }
-    })
-
     let getTagIdFromName = (tags, match) => {
         return tags.find((tag) => tag.name === _.startCase(match.params.name)).id
     }
 
     return (
         <ThemeProvider theme={theme}>
+            <CssBaseline/>
             <Helmet>
                 <body className="body"/>
             </Helmet>
             <Favicon url={config.favicon}/>
-            <CssBaseline/>
             <Container>
                 <Header header={config.header} tags={config.tags}/>
                 <BrowserRouter>

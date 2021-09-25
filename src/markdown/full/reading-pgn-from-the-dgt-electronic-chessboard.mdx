@@ -1,3 +1,12 @@
+import {Typography} from "@mui/material";
+<Typography>
+Do you like chess?  I'm not any good at it, but I do enjoy watching a good chess game.
+Nowadays, it's easy to find good chess online.  Big tournaments are streamed and include ESPN level
+commentary.  Over the summer I faithfully tracked the games of the [Grand Chess Tour](https://grandchesstour.org/)
+and was not disappointed.  Watching all of this good chess got me thinking about the data behind a chess game and
+how that data can be used to do cool things.
+</Typography>
+
 Electronic chess boards or e-boards store moves in their memory and can interface with a computer.  The particular board I was able to get
 my hands on, the [DGT Electronic Chess Board](https://www.dgtnorthamerica.com/eboards), can write these moves to disk in about 3 seconds after the move occurs.
 Each piece emits a faint RFID signal and the board contains a mesh sensor that detects the presence of any pieces
@@ -5,10 +14,8 @@ placed on top of it.  The piece needs to be directly on top of a square for the 
 the board stores the moves and reconstructs the game is beyond me, but from what I can
 tell as long as valid moves are played it works reliably.
 
-<img alt="e-board connected to a PC running LiveChess"
-     src="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/dgt-board-setup.jpg"/>
-
-E-board connected to a PC running Live Chess
+![e-board connected to a PC running LiveChess](https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/dgt-board-setup.jpg "E-board
+connected to a PC running Live Chess")
 
 DGT has released a few programs along with the board that includes drivers, debugging software and software to manage the output of
 one or more boards.  [RabbitQueen](https://digitalgametechnology.com/faq/software-downloads/rabbitqueen-software) is

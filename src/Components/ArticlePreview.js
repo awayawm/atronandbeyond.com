@@ -1,10 +1,10 @@
 import React from "react";
 import ArticlesCard from "../Styles/ArticlesCard";
-import {CardContent} from "@material-ui/core";
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
 import '../css/Articles.css'
 import {animated, config, useSpring} from "react-spring";
+import {CardContent} from "@mui/material";
 
 let ArticlePreview = (props) => {
     const previewProp = useSpring({

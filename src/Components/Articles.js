@@ -1,11 +1,11 @@
 import React from "react"
 import _ from "lodash"
 import "../css/Articles.css"
-import {Grid} from "@material-ui/core"
 import PropTypes from "prop-types"
 import {Helmet} from "react-helmet"
 import Footer from "./Footer";
 import ArticlePreview from "./ArticlePreview";
+import {Grid} from "@mui/material";
 
 let Articles = (props) => {
     return (

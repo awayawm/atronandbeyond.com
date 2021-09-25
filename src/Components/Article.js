@@ -5,7 +5,7 @@ import ArticlePaper from "../Styles/AritclePaper"
 import Footer from "./Footer";
 import {animated, config, useSpring} from "react-spring";
 import {Helmet} from "react-helmet";
-import {Typography} from "@material-ui/core";
+import {Typography} from "@mui/material";
 
 let Article = (props) => {
     let headerSpring = useSpring({
