@@ -2,11 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import "../css/Article.css"
 import ArticlePaper from "../Styles/AritclePaper"
-import ReactMarkdown from "react-markdown";
-import withData from './withData'
 import Footer from "./Footer";
 import {animated, config, useSpring} from "react-spring";
 import {Helmet} from "react-helmet";
+import {Typography} from "@material-ui/core";
 
 let Article = (props) => {
     let headerSpring = useSpring({
@@ -21,17 +20,15 @@ let Article = (props) => {
                 <title>{props.header.title}: {props.article.title}</title>
             </Helmet>
             <AnimatedPaper style={headerSpring} className="paper-article article">
-                <h1>{props.article.title}</h1>
-                <ReactMarkdown linkTarget="_blank">
-                    {props.data}
-                </ReactMarkdown>
+                <Typography variant="h3">{props.article.title}</Typography>
+                <props.article.content/>
             </AnimatedPaper>
             <Footer {...props} />
         </>
     )
 }
 
-export default withData(Article);
+export default Article;
 
 Article.propTypes = {
     data: PropTypes.string,

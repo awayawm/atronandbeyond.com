@@ -34,12 +34,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.(md)$/,
-                loader: "file-loader",
-                options: {
-                    name: '[name].[ext]',
-                    outputPath: 'md/'
-                }
+                test: /\.(md|mdx)$/,
+                use: ['babel-loader', '@mdx-js/loader']
             }
         ]
     },
