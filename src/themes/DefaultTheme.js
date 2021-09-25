@@ -1,6 +1,6 @@
-import {createTheme} from "@mui/material";
 import baloo from "@fontsource/baloo-bhai-2/files/baloo-bhai-2-latin-400-normal.woff2"
-console.log(baloo)
+import {createTheme} from "@mui/material";
+
 export const theme = createTheme({
     palette: {
         primary: {
@@ -11,17 +11,17 @@ export const theme = createTheme({
         body1: {
             fontSize: '1.2em',
         },
-        fontFamily: 'Baloo Bhai 2, serif'
+        fontFamily: 'BalooBhai2, serif'
     },
     components: {
         MuiCssBaseline: {
             styleOverrides: `
-                @font-face {
-                  font-family: 'Baloo Bhai 2';
-                  font-style: normal;
-                  font-weight: 400;
-                  src: url(${baloo}) format('woff2');
-                }
+                  @font-face {
+                      font-family: 'BalooBhai2';
+                      src: url('${baloo}') format('woff2');
+                      font-weight: normal;
+                      font-style: normal;
+                    }
               `,
         },
     },
