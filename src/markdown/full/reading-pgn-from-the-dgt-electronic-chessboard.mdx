@@ -1,36 +1,42 @@
+import {Link, Typography} from "@mui/material";
+
 Do you like chess?  I'm not any good at it, but I do enjoy watching a good chess game.
 Nowadays, it's easy to find good chess online.  Big tournaments are streamed and include ESPN level
-commentary.  Over the summer I faithfully tracked the games of the [Grand Chess Tour](https://grandchesstour.org/)
+commentary.  Over the summer I faithfully tracked the games of the <Link href='https://grandchesstour.org/' target="_blank" rel="noreferrer">Grand Chess Tour</Link>
 and was not disappointed.  Watching all of this good chess got me thinking about the data behind a chess game and
 how that data can be used to do cool things.
 
 Electronic chess boards or e-boards store moves in their memory and can interface with a computer.  The particular board I was able to get
-my hands on, the [DGT Electronic Chess Board](https://www.dgtnorthamerica.com/eboards), can write these moves to disk in about 3 seconds after the move occurs.
-Each piece emits a faint RFID signal and the board contains a mesh sensor that detects the presence of any pieces
-placed on top of it.  The piece needs to be directly on top of a square for the move to register. The details how
-the board stores the moves and reconstructs the game is beyond me, but from what I can
-tell as long as valid moves are played it works reliably.
+my hands on, the <Link href='https://www.dgtnorthamerica.com/eboards' target="_blank" rel="noreferrer">DGT Electronic Chess Board</Link>,
+can write these moves to disk in about 3 seconds after the move occurs. Each piece emits a faint RFID signal and the board contains a
+mesh sensor that detects the presence of any pieces placed on top of it.  The piece needs to be directly on top of a square
+for the move to register. The details how the board stores the moves and reconstructs the game is beyond me, but as long as valid
+moves are played it seems to work reliably.
 
 ![e-board connected to a PC running LiveChess](https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/dgt-board-setup.jpg "E-board
 connected to a PC running Live Chess")
 
+<Typography variant="caption">
+    A DGT board hooked upto a laptop using a serial cable and a USB to RS-232 Adapter
+</Typography>
+
 DGT has released a few programs along with the board that includes drivers, debugging software and software to manage the output of
-one or more boards.  [RabbitQueen](https://digitalgametechnology.com/faq/software-downloads/rabbitqueen-software) is
-helpful for dumping the board memory (readonly) and configuring internal parameters.  [RabbitPlugin](https://digitalgametechnology.com/faq/software-downloads/rabbitplugin-software)
+one or more boards.  <Link href='https://digitalgametechnology.com/faq/software-downloads/rabbitqueen-software' target="_blank" rel="noreferrer">RabbitQueen</Link> is
+helpful for dumping the board memory (readonly) and configuring internal parameters.  <Link href='https://digitalgametechnology.com/faq/software-downloads/rabbitplugin-software' target="_blank" rel="noreferrer">RabbitPlugin</Link>
 and RabbitConnect are the drivers for the board tell the OS how to handle the input from the board.
 
-Of the programs DGT provides, [LiveChess](http://www.livechesscloud.com/software/) is the most interesting.  It is
+Of the programs DGT provides, <Link href='http://www.livechesscloud.com/software/' target="_blank" rel="noreferrer">LiveChess</Link> is the most interesting.  It is
 used to manage the output of one or more e-boards and how the PGN gets written to disk.  It also shows if there is a
-connection issue with one of the boards. The output is in standard [PGN](https://en.wikipedia.org/wiki/Portable_Game_Notation) format and can be fed
+connection issue with one of the boards. The output is in standard <Link href='https://en.wikipedia.org/wiki/Portable_Game_Notation' target="_blank" rel="noreferrer">PGN</Link> format and can be fed
 to a program for playback or a chess engine for analysis.
 
 
 
 Pgn like this can be parsed using a chess library. Luckily there are many good free chess libraries on github for about
-any language you would want to use.  The follow code samples will use [chess.js](https://github.com/jhlywa/chess.js/blob/master/README.md)
-and be written in javascript.  [python-chess](https://github.com/boosungkim/python-chess) is a great choice for python
+any language you would want to use.  The follow code samples will use <Link href='https://github.com/jhlywa/chess.js/blob/master/README.md' target="_blank" rel="noreferrer">chess.js</Link>
+and be written in javascript.  <Link href='https://github.com/boosungkim/python-chess' target="_blank" rel="noreferrer">python-chess</Link> is a great choice for python
 coders and is even more feature rich than chess.js.  Both of these are able to parse the chess game and convert it into
 objects you can use to do whatever!
 
 To show off chess.js let's write a quick script that will display each move of this game from beginning to end.  This
-script will require [node.js](https://nodejs.org/en/) to be installed and that's how we'll run it from the command line.  
+script will require <Link href='https://nodejs.org/en/' target="_blank" rel="noreferrer">node.js</Link> to be installed and that's how we'll run it from the command line.

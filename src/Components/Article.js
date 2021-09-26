@@ -7,19 +7,20 @@ import styled from "@emotion/styled";
 
 let Article = (props) => {
 
-    let ArticlePaper = styled(Paper)`
-      background-color: #2a9d8f;
-      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
-
+    let StyledPaper = styled(Paper)`
       img {
         height: 100%;
         width: 100%;
       }
+      
+      a {
+        text-decoration: none;
+      }
 
-      padding: 1em 2em;
+      padding: 1.5em 2em;
     `
 
-    let Title = styled(Typography)`
+    let Title = styled.div`
       color: #e9c46a;
       border-bottom: 1px solid #e9c46a;
     `
@@ -29,15 +30,15 @@ let Article = (props) => {
         to: {x: 0, opacity: 1},
         config: config.slow
     })
-    let AnimatedPaper = animated(ArticlePaper)
+    let AnimatedPaper = animated(StyledPaper)
     return (
         <>
             <Helmet>
                 <title>{props.header.title}: {props.article.title}</title>
             </Helmet>
-            <AnimatedPaper style={headerSpring}>
-                <Title variant="h3">{props.article.title}</Title>
-                <props.article.content/>
+            <AnimatedPaper style={headerSpring} elevation={10} square>
+                <Typography variant="h3" component={Title}>{props.article.title}</Typography>
+                <props.article.content />
             </AnimatedPaper>
         </>
     )

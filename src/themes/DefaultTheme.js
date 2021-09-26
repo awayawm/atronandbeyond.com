@@ -6,8 +6,12 @@ let theme = createTheme({
         primary: {
             main: '#e9c46a',
         },
+        secondary: {
+            main: '#e76f51',
+        },
         background: {
             default: '#264653',
+            paper: '#2a9d8f',
         },
     },
     typography: {
@@ -29,7 +33,6 @@ let theme = createTheme({
               `,
         },
         Link: {
-            color: '#f4a261',
             textDecoration: 'none'
         }
     },

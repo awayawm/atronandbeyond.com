@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Divider, Stack} from "@mui/material";
+import {Divider, Button, Stack} from "@mui/material";
 import styled from "@emotion/styled";
 import {Link} from "react-router-dom";
 
@@ -11,21 +11,19 @@ let Navbar = (props) => {
       margin: 2.2em 0 1.5em 0;
     `
 
-    let StyledLink = styled(Link)`
+    let StyledButton = styled(Button)`
       font-size: x-large;
-      vertical-align: middle;
-      color: #e76f51;
-      text-decoration: none;
+      padding: .5em 1em;
     `
 
     return (
         <StyledStack direction="row"
                      divider={<Divider orientation="vertical" flexItem/>}
-                     spacing={10}>
+                     spacing={4}>
             {props.tags
                 .filter((tag) => tag.enabled)
                 .map((tag, i) => (
-                    <StyledLink key={i} to={tag.link}>{tag.icon} {tag.name}</StyledLink>
+                    <StyledButton color="secondary" component={Link} key={i} to={tag.link}>{tag.icon} {tag.name}</StyledButton>
                 ))}
         </StyledStack>
     )

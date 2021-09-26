@@ -2,18 +2,20 @@ import React from "react";
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
 import {animated, config, useSpring} from "react-spring";
-import {Card, CardContent, Typography} from "@mui/material";
+import {Button, Card, CardContent, Typography} from "@mui/material";
 import styled from "@emotion/styled";
 
 let ArticlePreview = (props) => {
     let StyledCard = styled(Card)`
-      background-color: #2a9d8f;
-      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
       padding: 5px 1.1em;
+      a {
+        text-decoration: none;
+      }
     `
-    let StyledLink = styled(Link)`
-      text-decoration: none;
-      color: #e9c46a;
+
+    let StyledButton = styled(Button)`
+      font-size: x-large;
+      font-weight: bold;
     `
 
     let StyledDate = styled.div`
@@ -36,11 +38,11 @@ let ArticlePreview = (props) => {
     })
     const AnimatedTypography = animated(Typography)
     return (
-        <AnimatedArticlesCard style={cardAnimation}>
+        <AnimatedArticlesCard style={cardAnimation} elevation={5} square>
             <CardContent>
                 <AnimatedTypography variant="h4" style={titleAnimation}>
-                    <StyledLink
-                        to={`/article/${props.article.link}`}>{props.article.title}</StyledLink>
+                    <StyledButton component={Link}
+                        to={`/article/${props.article.link}`}>{props.article.title}</StyledButton>
                 </AnimatedTypography>
                 <props.article.preview/>
                 <Typography variant="body2">

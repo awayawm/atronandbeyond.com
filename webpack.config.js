@@ -9,8 +9,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: "/src/index.js",
-    //mode: isDevelopment ? 'development' : 'production',
-    mode: 'production', // issue with webpack 5 and react-markdown https://github.com/remarkjs/remark/discussions/831
+    mode: isDevelopment ? 'development' : 'production',
     module: {
         rules: [
             {
