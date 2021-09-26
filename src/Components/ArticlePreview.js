@@ -16,37 +16,37 @@ let ArticlePreview = (props) => {
       color: #e9c46a;
     `
 
-    let StyledFooter = styled.div`
+    let StyledDate = styled.div`
       color: #e9c46a;
       text-align: right;
     `
 
     const cardAnimation = useSpring({
-        from: {opacity: 0},
-        to: {opacity: 1},
-        config: config.molasses
+        from: {x: -20,opacity: 0},
+        to: {x: 0, opacity: 1},
+        config: config.gentle
     })
     const AnimatedArticlesCard = animated(StyledCard)
 
     const titleAnimation = useSpring({
-        from: {x: -100, opacity: 0},
+        from: {x: -40, opacity: 0},
         to: {x: 0, opacity: 1},
-        config: config.slow,
-        delay: 200
+        config: config.gentle,
+        delay: 80
     })
-    const AnimatedLink = animated(StyledLink)
+    const AnimatedTypography = animated(Typography)
     return (
         <AnimatedArticlesCard style={cardAnimation}>
             <CardContent>
-                <Typography variant="h4">
-                    <AnimatedLink style={titleAnimation}
-                                  to={`/article/${props.article.link}`}>{props.article.title}</AnimatedLink>
-                </Typography>
+                <AnimatedTypography variant="h4" style={titleAnimation}>
+                    <StyledLink
+                        to={`/article/${props.article.link}`}>{props.article.title}</StyledLink>
+                </AnimatedTypography>
                 <props.article.preview/>
                 <Typography variant="body2">
-                    <StyledFooter>
+                    <StyledDate>
                         {props.article.date}
-                    </StyledFooter>
+                    </StyledDate>
                 </Typography>
             </CardContent>
         </AnimatedArticlesCard>

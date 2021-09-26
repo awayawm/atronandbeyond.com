@@ -3,23 +3,15 @@ import config from "./config"
 import Header from "./Components/Header"
 import Articles from "./Components/Articles"
 import {BrowserRouter, Route, Switch} from "react-router-dom"
-import {Helmet} from "react-helmet"
 import Article from "./Components/Article"
 import Navbar from "./Components/Navbar"
 import _ from "lodash";
 import Favicon from "react-favicon";
 import {Container, CssBaseline, ThemeProvider} from "@mui/material";
 import theme from './themes/DefaultTheme'
-import styled from "@emotion/styled";
 import {Footer} from "./Components/Footer";
 
 let App = () => {
-
-    let StyledBody = styled.body`
-      background-color: #264653;
-      color: #e9c46a;
-    `
-
     let getTagIdFromName = (tags, match) => {
         return tags.find((tag) => tag.name === _.startCase(match.params.name)).id
     }
@@ -27,9 +19,6 @@ let App = () => {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline/>
-            <Helmet>
-                <StyledBody/>
-            </Helmet>
             <Favicon url={config.favicon}/>
             <Container>
                 <Header header={config.header} tags={config.tags}/>
