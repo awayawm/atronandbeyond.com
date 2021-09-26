@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import "../css/Header.css"
 import {animated, config, useSpring} from "react-spring";
 import {Typography} from "@mui/material";
+import styled from "@emotion/styled";
 
 let Header = (props) => {
 
@@ -19,15 +19,22 @@ let Header = (props) => {
         delay: 100
     })
 
+    let StyledHeader = styled.div`
+      text-align: center;
+      margin-top: 2em;
+      margin-bottom: 1.1em;
+      color: #e9c46a;
+    `
+
     const AnimatedTypography = animated(Typography)
 
     return (
         <>
-            <header>
+            <StyledHeader>
                 <AnimatedTypography variant="h3"
                                     style={headerSpring}>{props.header.title}</AnimatedTypography>
                 <AnimatedTypography style={taglineSpring}>{props.header.tagline}</AnimatedTypography>
-            </header>
+            </StyledHeader>
         </>
     )
 }

@@ -1,9 +1,7 @@
 import React from "react"
 import _ from "lodash"
-import "../css/Articles.css"
 import PropTypes from "prop-types"
 import {Helmet} from "react-helmet"
-import Footer from "./Footer";
 import ArticlePreview from "./ArticlePreview";
 import {Grid} from "@mui/material";
 
@@ -13,7 +11,7 @@ let Articles = (props) => {
             <Helmet>
                 <title>{props.header.title}</title>
             </Helmet>
-            <div className="articleGrid">
+            <div>
                 <Grid container spacing={2}>
                     {//article is enabled
                         !props.hasArticles && props.articles
@@ -37,7 +35,7 @@ let Articles = (props) => {
 
                 </Grid>
             </div>
-            <Footer {...props}/>
+
         </>
     )
 }

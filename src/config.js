@@ -22,6 +22,7 @@ import recording_audio_over_usb_otg_with_the_mc_707_preview
 
 let config = {
     favicon: "https://s3.us-west-2.amazonaws.com/atronandbeyond.com/favicon.ico",
+    url: 'https://atronandbeyond.com',
     header: {
         title: "atronandbeyond.com",
         tagline: "Beats and Code"
