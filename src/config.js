@@ -3,7 +3,8 @@ import reading_pgn_from_the_dgt_electronic_chessboard
 import unitywebrequest_and_tmp_dropdown_making_a_dynamic_dropdown_in_unity
     from './markdown/full/unitywebrequest-and-tmp-dropdown-making-a-dynamic-dropdown-in-unity.mdx'
 import building_a_discord_bot_with_discord_js from './markdown/full/building-a-discord-bot-with-discord-js.mdx'
-import checking_out_the_mc_707_fireware_update_1_72 from './markdown/full/checking-out-the-mc-707-fireware-update-1-72.mdx'
+import checking_out_the_mc_707_fireware_update_1_72
+    from './markdown/full/checking-out-the-mc-707-fireware-update-1-72.mdx'
 import creating_a_custom_toolchain_for_react from './markdown/full/creating-a-custom-toolchain-for-react.mdx'
 import mounting_volume_made_from_snapshot_to_ec2 from './markdown/full/mounting-volume-made-from-snapshot-to-ec2.mdx'
 import recording_audio_over_usb_otg_with_the_mc_707
@@ -13,10 +14,14 @@ import reading_pgn_from_the_dgt_electronic_chessboard_preview
     from './markdown/preview/reading-pgn-from-the-dgt-electronic-chessboard-preview.mdx'
 import unitywebrequest_and_tmp_dropdown_making_a_dynamic_dropdown_in_unity_preview
     from './markdown/preview/unitywebrequest-and-tmp-dropdown-making-a-dynamic-dropdown-in-unity-preview.mdx'
-import building_a_discord_bot_with_discord_js_preview from './markdown/preview/building-a-discord-bot-with-discord-js-preview.mdx'
-import checking_out_the_mc_707_fireware_update_1_72_preview from './markdown/preview/checking-out-the-mc-707-fireware-update-1-72-preview.mdx'
-import creating_a_custom_toolchain_for_react_preview from './markdown/preview/creating-a-custom-toolchain-for-react-preview.mdx'
-import mounting_volume_made_from_snapshot_to_ec2_preview from './markdown/preview/mounting-volume-made-from-snapshot-to-ec2-preview.mdx'
+import building_a_discord_bot_with_discord_js_preview
+    from './markdown/preview/building-a-discord-bot-with-discord-js-preview.mdx'
+import checking_out_the_mc_707_fireware_update_1_72_preview
+    from './markdown/preview/checking-out-the-mc-707-fireware-update-1-72-preview.mdx'
+import creating_a_custom_toolchain_for_react_preview
+    from './markdown/preview/creating-a-custom-toolchain-for-react-preview.mdx'
+import mounting_volume_made_from_snapshot_to_ec2_preview
+    from './markdown/preview/mounting-volume-made-from-snapshot-to-ec2-preview.mdx'
 import recording_audio_over_usb_otg_with_the_mc_707_preview
     from './markdown/preview/recording-audio-over-usb-otg-with-the-mc-707-preview.mdx'
 
@@ -116,7 +121,7 @@ let config = {
             tags: [3],
             date: "2021-06-20",
             content: creating_a_custom_toolchain_for_react,
-            preview:creating_a_custom_toolchain_for_react_preview
+            preview: creating_a_custom_toolchain_for_react_preview
         },
         {
             enabled: true,
@@ -125,16 +130,16 @@ let config = {
             tags: [1, 5, 4],
             date: "2021-07-02",
             content: mounting_volume_made_from_snapshot_to_ec2,
-            preview:mounting_volume_made_from_snapshot_to_ec2_preview
+            preview: mounting_volume_made_from_snapshot_to_ec2_preview
         },
         {
             enabled: true,
-            title: "Recording Audio Over USB-OTG with the MC-707",
+            title: "Recording into the MC-707 from a Cell Phone using USB-OTG",
             link: "recording-audio-over-usb-otg-with-the-mc-707",
             tags: [1, 3],
             date: "2021-09-18",
             content: recording_audio_over_usb_otg_with_the_mc_707,
-            preview:recording_audio_over_usb_otg_with_the_mc_707_preview
+            preview: recording_audio_over_usb_otg_with_the_mc_707_preview
         },
     ],
 }
