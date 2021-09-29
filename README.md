@@ -11,4 +11,5 @@ A blog written in React
 ## todo
 
 1. analytics 
-2. add rss feed https://developers.digital.abc.net.au/2021/09/16/rendering-xml-with-jsx-templates/
+2. add rss feed https://developers.digital.abc.net.au/2021/09/16/rendering-xml-with-jsx-templat
+3. article - opengl with headless ubuntu

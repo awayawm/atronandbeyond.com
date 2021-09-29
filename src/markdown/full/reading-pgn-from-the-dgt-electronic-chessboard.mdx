@@ -13,12 +13,18 @@ mesh sensor that detects the presence of any pieces placed on top of it.  The pi
 for the move to register. The details how the board stores the moves and reconstructs the game is beyond me, but as long as valid
 moves are played it seems to work reliably.
 
-![e-board connected to a PC running LiveChess](https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/dgt-board-setup.jpg "E-board
+![e-board connected to a PC running LiveChess](https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/PXL_20210927_175710142.jpg "E-board
 connected to a PC running Live Chess")
 
 <Typography variant="caption">
     A DGT board hooked upto a laptop using a serial cable and a USB to RS-232 Adapter
 </Typography>
+
+In the above picture we have a DGT e-board with a serial connection to a PC through a USB to RS-232 adapter.  The
+RJ-45 connector is for daisy chaining multiple boards together.  There's also a free connector that looks like a
+headphone jack that plugs into a game clock like the <Link href='https://www.dgtnorthamerica.com/dgt-3000'>DGT-3000</Link>
+but it isn't required.  If it is plugged in though the clock value for each move will be included as a comment in the PGN.
+The cable going off the image in the bottom-left corner is for the power adapter.
 
 DGT has released a few programs along with the board that includes drivers, debugging software and software to manage the output of
 one or more boards.  <Link href='https://digitalgametechnology.com/faq/software-downloads/rabbitqueen-software' target="_blank" rel="noreferrer">RabbitQueen</Link> is
@@ -39,4 +45,7 @@ coders and is even more feature rich than chess.js.  Both of these are able to p
 objects you can use to do whatever!
 
 To show off chess.js let's write a quick script that will display each move of this game from beginning to end.  This
-script will require <Link href='https://nodejs.org/en/' target="_blank" rel="noreferrer">node.js</Link> to be installed and that's how we'll run it from the command line.
+script will require <Link href='https://nodejs.org/en/' target="_blank" rel="noreferrer">node.js</Link> to be installed
+and that's how we'll run it from the command line.  We'll also configure Livechess enough so that it writes a pgn to
+disk.  Our code will poll this file and print its contents.  We can even get fancy and only print the broad if we have
+detected changes since the last time we polled the board.
