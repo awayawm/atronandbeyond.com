@@ -1,16 +1,12 @@
 import React from "react"
 import _ from "lodash"
 import PropTypes from "prop-types"
-import {Helmet} from "react-helmet"
 import ArticlePreview from "./ArticlePreview";
 import {Grid} from "@mui/material";
 
 let Articles = (props) => {
     return (
         <>
-            <Helmet>
-                <title>{props.header.title}</title>
-            </Helmet>
             <div>
                 <Grid container spacing={2}>
                     {//article is enabled

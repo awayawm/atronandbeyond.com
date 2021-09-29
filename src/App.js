@@ -10,6 +10,7 @@ import Favicon from "react-favicon";
 import {Container, CssBaseline, ThemeProvider} from "@mui/material";
 import theme from './themes/DefaultTheme'
 import {Footer} from "./Components/Footer";
+import {Helmet} from "react-helmet";
 
 let App = () => {
     let getTagIdFromName = (tags, match) => {
@@ -20,6 +21,9 @@ let App = () => {
         <ThemeProvider theme={theme}>
             <CssBaseline/>
             <Favicon url={config.favicon}/>
+            <Helmet>
+                <title>{config.header.title}</title>
+            </Helmet>
             <Container>
                 <Header header={config.header} tags={config.tags}/>
                 <BrowserRouter>
@@ -29,7 +33,6 @@ let App = () => {
                             <Article
                                 article={config.articles.filter(article => article.link === match.params.name)[0]}
                                 tags={config.tags}
-                                footer={config.footer}
                                 header={config.header}
                             />
                         )}>
@@ -38,8 +41,6 @@ let App = () => {
                             <Articles
                                 articles={config.articles.filter(article => article.tags.includes(getTagIdFromName(config.tags, match)))}
                                 tags={config.tags}
-                                footer={config.footer}
-                                header={config.header}
                             />
                         )}>
                         </Route>
@@ -47,8 +48,6 @@ let App = () => {
                             <Articles
                                 articles={config.articles}
                                 tags={config.tags}
-                                footer={config.footer}
-                                header={config.header}
                             />
                         </Route>
                     </Switch>
