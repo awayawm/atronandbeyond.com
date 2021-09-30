@@ -1,4 +1,5 @@
-import {Link, Typography} from "@mui/material";
+import {Link, Card, CardContent, CardMedia, Typography} from "@mui/material";
+import Carousel from 'react-material-ui-carousel'
 
 Do you like chess?  I'm not any good at it, but I do enjoy watching a good chess game.
 Nowadays, it's easy to find good chess online.  Big tournaments are streamed and include ESPN level
@@ -36,8 +37,6 @@ used to manage the output of one or more e-boards and how the PGN gets written t
 connection issue with one of the boards. The output is in standard <Link href='https://en.wikipedia.org/wiki/Portable_Game_Notation' target="_blank" rel="noreferrer">PGN</Link> format and can be fed
 to a program for playback or a chess engine for analysis.
 
-
-
 Pgn like this can be parsed using a chess library. Luckily there are many good free chess libraries on github for about
 any language you would want to use.  The follow code samples will use <Link href='https://github.com/jhlywa/chess.js/blob/master/README.md' target="_blank" rel="noreferrer">chess.js</Link>
 and be written in javascript.  <Link href='https://github.com/boosungkim/python-chess' target="_blank" rel="noreferrer">python-chess</Link> is a great choice for python
@@ -49,3 +48,118 @@ script will require <Link href='https://nodejs.org/en/' target="_blank" rel="nor
 and that's how we'll run it from the command line.  We'll also configure Livechess enough so that it writes a pgn to
 disk.  Our code will poll this file and print its contents.  We can even get fancy and only print the broad if we have
 detected changes since the last time we polled the board.
+
+First steps are to plug in the board and start up LiveChess.  As long as the board shows up on one of the COM ports you
+are good to go.  Then create a new tournament using the option under the file menu and select that new tournament.  When you select
+this tournament some tabs will appear and start by filling out tournament information and player information.  These values
+will be used in the PGN's header.
+
+<Carousel>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-1.PNG"
+                   alt="Home screen of LiveChess shows which boards are connected and their connection status"/>
+        <CardContent style={{textAlign:'center'}}>
+            Home screen of LiveChess shows which boards are connected and their connection status
+        </CardContent>
+    </Card>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-2.PNG"
+                   alt="New Tournaments can be created under the file menu"/>
+        <CardContent style={{textAlign:'center'}}>
+            File > New Tournament will create a new tournament for you
+        </CardContent>
+    </Card>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-3.PNG"
+                   alt="After entering in the tournament details enter some player information"/>
+        <CardContent style={{textAlign:'center'}}>
+            After entering in the tournament details enter some player information
+        </CardContent>
+    </Card>
+</Carousel>
+
+Next move to the Output tab.  The gear button in the lower righthand side will give you the output to write the output
+to the cloud or to write it to some location on disk.  Select the Export to filesystem option and a window will appear.  If
+your parser can handle e-pgn you may want it.  <Link target="_blank" rel="noreferrer" href="https://www.enpassant.dk/chess/palview/enhancedpgn.htm">ePGN</Link>
+has a few extra fields that are useful for live games like time on play but for what we're doing here we don't need it.
+Finally head to the round tab and add some players to your round.  Select the round then click the gear in the
+lower right corner.  When you're ready hit start recording!
+
+<Carousel>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-4.PNG"
+                   alt="Select the gear in the lower right corner and export to filesystem to write the pgn file to disk"/>
+        <CardContent style={{textAlign:'center'}}>
+            Select the gear in the lower right corner and export to filesystem to write the pgn file to disk
+        </CardContent>
+    </Card>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-5.PNG"
+                   alt="Since we only have one round it's okay for the pgn to be in one file and we don't need the extra fields e-pgn provides"/>
+        <CardContent style={{textAlign:'center'}}>
+            Since we only have one round it's okay for the pgn to be in one file and we don't need the extra fields ePGN provides
+        </CardContent>
+    </Card>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-6.PNG"
+                   alt="After entering in the tournament details enter some player information"/>
+        <CardContent style={{textAlign:'center'}}>
+            Add some players to your round, select the round using the checkbox, select the gear and start recording when you're ready!
+        </CardContent>
+    </Card>
+</Carousel>
+
+Once you hit that start recording button a new link recording will appear on the same row as the round that you can click
+like a hyperlink.  This takes you two a new window that shows the state of the board.  With every new move that is play the
+move will be written to the pgn file to disk.
+
+<Carousel>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-7.PNG"
+                   alt="Once start recording is selected a recording link appears"/>
+        <CardContent style={{textAlign:'center'}}>
+            Once start recording is selected a recording link appears
+        </CardContent>
+    </Card>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-8.PNG"
+                   alt="Since we only have one round it's okay for the pgn to be in one file and we don't need the extra fields e-pgn provides"/>
+        <CardContent style={{textAlign:'center'}}>
+            The recording screen will show the initial moves
+        </CardContent>
+    </Card>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-9.PNG"
+                   alt="After entering in the tournament details enter some player information"/>
+        <CardContent style={{textAlign:'center'}}>
+            New moves are show in the recording window.  Pgn can be edited manually here as well
+        </CardContent>
+    </Card>
+    <Card elevation={0}>
+        <CardMedia component="img"
+                   image="https://s3.us-west-2.amazonaws.com/atronandbeyond.com/atronandbeyond-images/livechess-10.PNG"
+                   alt="Moves are written to the file on disk as they are played"/>
+        <CardContent style={{textAlign:'center'}}>
+            Moves are written to the file on disk as they are played
+        </CardContent>
+    </Card>
+</Carousel>
+
+Now that we have a file on disk we can start thinking about nodejs and the code we want to write that will for now
+simply display an ascii representation of the board each time a new move is played.  Simply put we want to check this
+file on an interval, let's say once a second, and if we notice that there are more moves than the last time we checked
+it we want to display the board.  There are some methods in <Link href="https://github.com/jhlywa/chess.js">chess.js</Link> that will be useful for this
+
+* <Link href="https://github.com/jhlywa/chess.js/#load_pgnpgn--options-">load_pgn(pgn, [ options ])</Link> loads the pgn file into the library
+* <Link href="https://github.com/jhlywa/chess.js/#history-options-">.history([ options ])</Link> returns a list of all the moves containing all kinds of useful data.  We'll be checking its <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length">.length</Link>
+* <Link href="https://github.com/jhlywa/chess.js/#ascii">.ascii()</Link> is used to display the board
+
