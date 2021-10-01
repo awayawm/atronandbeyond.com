@@ -124,7 +124,7 @@ let config = {
             preview: creating_a_custom_toolchain_for_react_preview
         },
         {
-            enabled: true,
+            enabled: false,
             title: "Mounting a Snapshot to an EC2 Machine",
             link: "mounting-volume-made-from-snapshot-to-ec2",
             tags: [1, 5, 4],
