@@ -44,16 +44,15 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist/"),
-        publicPath: "../dist/",
+        //publicPath: "../dist/",
         filename: "bundle.js",
         clean: true,
     },
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        publicPath: '/dist/',
         hot: true,
-        index: 'index.html',
         historyApiFallback: true,
+        port: process.env.DEV_PORT,
+        allowedHosts: 'auto'
     },
     plugins: [
         isDevelopment && new webpack.HotModuleReplacementPlugin(),
